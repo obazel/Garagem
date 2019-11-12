@@ -1,21 +1,18 @@
 package util;
 
 import model.Cliente;
-import model.Gerente;
 import model.Veiculo;
 import model.Vendedor;
-import model.Funcionario;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Transacao {
-
-    //Todas as transações devem conter os seguintes elementos.
-
     //Lista de veículos disponíveis para venda.
     public List<Veiculo> veiculosDisponiveis = new ArrayList<>();
 
+    //Todas as transações devem conter os seguintes elementos.
     private int id;
     private Cliente cliente;
     private Veiculo veiculo;

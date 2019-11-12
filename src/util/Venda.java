@@ -11,6 +11,8 @@ public class Venda extends Transacao {
 
     public List<Venda> vendas = new ArrayList<>();
 
+    public List<Veiculo> veiculosVendidos = new ArrayList<>();
+
     public Venda(){}
 
     public Venda(Cliente clienteComprador, Veiculo veiculoVendido, Vendedor vendedor, int id, int mes){
@@ -21,6 +23,7 @@ public class Venda extends Transacao {
         setMes(mes);
 
         vendas.add(this);
+        veiculosVendidos.add(veiculoVendido);
     }
 
     public double verificaValorVendasPorMesPorFuncionarioVendedor(Funcionario funcionario, int mes){
