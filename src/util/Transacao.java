@@ -8,11 +8,13 @@ import model.Vendedor;
 public abstract class Transacao {
 
     //Todas as transações devem conter os seguintes elementos:
+
     private int id;
     private Cliente cliente;
     private Veiculo veiculo;
     private Gerente gerente;
     private Vendedor vendedor;
+    private double valor;
 
     public Cliente getCliente() {
         return cliente;
@@ -54,5 +56,11 @@ public abstract class Transacao {
         this.id = id;
     }
 
-    public abstract double calculaValorTransacao();
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
 }

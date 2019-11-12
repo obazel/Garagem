@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4553a85a-3ecd-4954-9866-4b9924ac659b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Endereco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Funcionario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Gerente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Marca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Modelo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Pessoa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Veiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Vendedor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/CompraCliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/CompraGaragem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/Transacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/CompraCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/CompraCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/CompraGaragem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/CompraGaragem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Transacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Transacao.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,24 +19,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/util/CompraGaragem.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Vendedor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="94" selection-start-line="9" selection-start-column="94" selection-end-line="9" selection-end-column="94" />
+            <state relative-caret-position="221">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#CompraCliente#0;class#CompraGaragem#0" />
+                <element signature="method#calculaSalario#0;class#Vendedor#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util/CompraGaragem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="19" selection-end-column="90" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/util/CompraCliente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="27" column="1" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="27" selection-end-column="1" />
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#CompraCliente#0;class#CompraCliente#0" />
@@ -57,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/Transacao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+            <state relative-caret-position="646">
+              <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,27 +86,20 @@
         <option value="$PROJECT_DIR$/src/model/Funcionário.java" />
         <option value="$PROJECT_DIR$/src/model/Funcionario.java" />
         <option value="$PROJECT_DIR$/src/model/Gerente.java" />
-        <option value="$PROJECT_DIR$/src/model/Vendedor.java" />
         <option value="$PROJECT_DIR$/src/model/Cliente.java" />
         <option value="$PROJECT_DIR$/src/model/Cliente_Comprador.java" />
         <option value="$PROJECT_DIR$/src/model/Marca.java" />
         <option value="$PROJECT_DIR$/src/model/Modelo.java" />
         <option value="$PROJECT_DIR$/src/model/Veiculo.java" />
         <option value="$PROJECT_DIR$/src/util/Compra.java" />
+        <option value="$PROJECT_DIR$/src/model/Vendedor.java" />
+        <option value="$PROJECT_DIR$/src/util/CompraGaragem.java" />
         <option value="$PROJECT_DIR$/src/util/Transacao.java" />
         <option value="$PROJECT_DIR$/src/util/CompraCliente.java" />
-        <option value="$PROJECT_DIR$/src/util/CompraGaragem.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="76" />
     <option name="y" value="20" />
     <option name="width" value="1280" />
@@ -154,6 +146,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -188,12 +181,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573577046746</updated>
-      <workItem from="1573577051277" duration="3206000" />
+      <workItem from="1573577051277" duration="3973000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3206000" />
+    <option name="totallyTimeSpent" value="3973000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -267,16 +260,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Vendedor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-          <folding>
-            <element signature="method#calculaSalario#0;class#Vendedor#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Cliente_Comprador.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -325,10 +308,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Vendedor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="method#calculaSalario#0;class#Vendedor#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/CompraGaragem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="19" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/util/Transacao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        <state relative-caret-position="646">
+          <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -337,22 +337,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/CompraCliente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="27" column="1" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="27" selection-end-column="1" />
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#CompraCliente#0;class#CompraCliente#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/CompraGaragem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="94" selection-start-line="9" selection-start-column="94" selection-end-line="9" selection-end-column="94" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#CompraCliente#0;class#CompraGaragem#0" />
           </folding>
         </state>
       </provider>

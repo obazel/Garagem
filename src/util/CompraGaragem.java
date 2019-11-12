@@ -9,20 +9,16 @@ public class CompraGaragem extends Transacao{
 
     //Nesta classe ocorre a transação de compra por parte da Garagem de um carro de terceiros.
 
-    private Cliente clienteVendedor;
-    private Veiculo veiculoComprado;
-    private Gerente gerente;
-    private Vendedor vendedor;
-
     public CompraGaragem(Cliente clienteVendedor, Veiculo veiculoComprado, Vendedor vendedor, Gerente gerente, int id){
         setId(id);
         setCliente(clienteVendedor);
         setGerente(gerente);
         setVendedor(vendedor);
         setVeiculo(veiculoComprado);
+
+        //Adicionando valor da transação áo Vendedor.
+        vendedor.setValorVendido(veiculoComprado.getValor() + vendedor.getValorVendido());
     }
 
-    public double calculaValorTransacao(){
-        return veiculoComprado.getValor();
-    }
+
 }
