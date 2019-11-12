@@ -13,10 +13,9 @@ public class Venda extends Transacao {
 
     public Venda(){}
 
-    public Venda(Cliente clienteComprador, Veiculo veiculoVendido, Vendedor vendedor, Gerente gerente, int id, int mes){
+    public Venda(Cliente clienteComprador, Veiculo veiculoVendido, Vendedor vendedor, int id, int mes){
         setId(id);
         setCliente(clienteComprador);
-        setGerente(gerente);
         setVendedor(vendedor);
         setVeiculo(veiculoVendido);
         setMes(mes);
@@ -48,6 +47,11 @@ public class Venda extends Transacao {
             }
         }
         return valorTotal;
+    }
+
+    public String toString(){
+        return "|====| VENDA |====|" + "\nID: " + getId() +"\nCliente: " + getCliente().getNome() + "\nVeículo: " + getVeiculo().toString()  +
+                "Vendedor: " + getVendedor().toString() + "\nMês: " + getMes();
     }
 
 }

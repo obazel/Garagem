@@ -8,15 +8,17 @@ import model.Vendedor;
 public class CompraGaragem extends Transacao{
 
     //Nesta classe ocorre a transação de compra por parte da Garagem de um carro de terceiros.
-    public CompraGaragem(Cliente clienteVendedor, Veiculo veiculoComprado, Vendedor vendedor, Gerente gerente, int id){
+    public CompraGaragem(Cliente clienteVendedor, Veiculo veiculoComprado, Vendedor vendedor, int id){
         setId(id);
         setCliente(clienteVendedor);
-        setGerente(gerente);
         setVendedor(vendedor);
         setVeiculo(veiculoComprado);
 
         veiculosDisponiveis.add(veiculoComprado);
     }
 
-
+    public String toString(){
+        return "|====| COMPRA |====|" + "\nID: " + getId() +"\nCliente: " + getCliente().getNome() + "\nVeículo: " + getVeiculo().toString()  +
+                "Vendedor: " + getVendedor().toString() + "\nMês: " + getMes();
+    }
 }

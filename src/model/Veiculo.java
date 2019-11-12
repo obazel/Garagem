@@ -47,4 +47,8 @@ public class Veiculo {
         setPlaca(placa);
         setValor(valor);
     }
+
+    public String toString(){
+        return "|====| VEÍCULO |====|" + "\nCor: " + getCor() + "\nModelo: " + getModelo() + "\nValor: " + getValor() + "\nPlaca: " + getPlaca();
+    }
 }

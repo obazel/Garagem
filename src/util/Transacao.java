@@ -19,7 +19,6 @@ public abstract class Transacao {
     private int id;
     private Cliente cliente;
     private Veiculo veiculo;
-    private Gerente gerente;
     private Vendedor vendedor;
     private int mes;
 
@@ -45,14 +44,6 @@ public abstract class Transacao {
 
     public void setVeiculo(Veiculo veiculo) {
         this.veiculo = veiculo;
-    }
-
-    public Gerente getGerente() {
-        return gerente;
-    }
-
-    public void setGerente(Gerente gerente) {
-        this.gerente = gerente;
     }
 
     public Vendedor getVendedor() {

@@ -35,4 +35,8 @@ public class Modelo {
         setMarca(marca);
         setNomeModelo(nomeModelo);
     }
+
+    public String toString(){
+        return "|====| MODELO |====|" + "\nModelo: " + getNomeModelo() + "\nAno: " + getAno() + "\nMarca: " + getMarca();
+    }
 }
