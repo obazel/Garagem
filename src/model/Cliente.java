@@ -16,4 +16,10 @@ public abstract class Cliente extends Pessoa {
     public Cliente(int id){
         setId(id);
     }
+
+    public String toString(){
+        return "|====| CLIENTE |====|" + "\nID: " + getId() + "\nNome: " + getNome() + "\nSexo: " + getSexo() + "\nCPF: " + getCpf() +
+                "Data de nascimento: " + getDataNascimento() + "\nTelefone: " + getTelefone() + "\nEndereço: " +
+                getEnd();
+    }
 }

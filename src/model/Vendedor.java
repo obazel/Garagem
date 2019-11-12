@@ -2,28 +2,23 @@ package model;
 
 public class Vendedor extends Funcionario {
 
-    private double valorVendido; //Obtido pela soma das vendas do próprio vendedor.
+    private double porcentagemComissao;
 
-    public double getValorVendido() {
-        return valorVendido;
+    public double getPorcentagemComissao() {
+        return porcentagemComissao;
     }
 
-    public void setValorVendido(double valorVendido) {
-        this.valorVendido = valorVendido;
+    public void setPorcentagemComissao(double porcentagemComissao) {
+        this.porcentagemComissao = porcentagemComissao;
     }
 
     public Vendedor(int matricula){
         setMatricula(matricula);
     }
 
-    public void calculaSalario(){
-
-        //Se o volume de vendas atingir um certo patamar, o vendedor ganha comissão, caso contrario, o salário é tabelado.
-
-        if(getValorVendido() > 50000){
-            setSalario(getNumeroDeVendas() * (0.50 * getValorVendido()));
-        }else{
-            setSalario(2000);
-        }
+    public String toString(){
+        return "|====| VENDEDOR |====|" + "\nMatrícula: " + getMatricula() + "\nNome: " + getNome() + "\nSexo: " + getSexo() + "\nCPF: " + getCpf() +
+                "Data de nascimento: " + getDataNascimento() + "\nTelefone: " + getTelefone() + "\nEndereço: " +
+                getEnd() + "";
     }
 }

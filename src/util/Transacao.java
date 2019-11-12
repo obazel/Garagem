@@ -4,17 +4,32 @@ import model.Cliente;
 import model.Gerente;
 import model.Veiculo;
 import model.Vendedor;
+import model.Funcionario;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Transacao {
 
-    //Todas as transações devem conter os seguintes elementos:
+    //Todas as transações devem conter os seguintes elementos.
+
+    //Lista de veículos disponíveis para venda.
+    public List<Veiculo> veiculosDisponiveis = new ArrayList<>();
 
     private int id;
     private Cliente cliente;
     private Veiculo veiculo;
     private Gerente gerente;
     private Vendedor vendedor;
-    private double valor;
+    private int mes;
+
+    public int getMes() {
+        return mes;
+    }
+
+    public void setMes(int mes) {
+        this.mes = mes;
+    }
 
     public Cliente getCliente() {
         return cliente;
@@ -54,13 +69,5 @@ public abstract class Transacao {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public double getValor() {
-        return valor;
-    }
-
-    public void setValor(double valor) {
-        this.valor = valor;
     }
 }

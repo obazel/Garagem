@@ -39,6 +39,8 @@ public class Veiculo {
         this.placa = placa;
     }
 
+    public Veiculo(){}
+
     public Veiculo(String cor, Modelo modelo, double valor, String placa){
         setCor(cor);
         setModelo(modelo);
