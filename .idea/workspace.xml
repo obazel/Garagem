@@ -2,8 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4553a85a-3ecd-4954-9866-4b9924ac659b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/util/CadastraCarro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Garagem/Teste.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Garagem/Teste.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Garagem/model/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Garagem/model/Cliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Garagem/model/Gerente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Garagem/model/Gerente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Garagem/model/Marca.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Garagem/model/Marca.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Garagem/model/Modelo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Garagem/model/Modelo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Garagem/model/Veiculo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Garagem/model/Veiculo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Garagem/model/Vendedor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Garagem/model/Vendedor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Garagem/util/CompraGaragem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Garagem/util/CompraGaragem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Garagem/util/Transacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Garagem/util/Transacao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Garagem/util/Venda.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Garagem/util/Venda.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Teste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Teste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Gerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Gerente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Marca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Marca.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Modelo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Veiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Vendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Vendedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/CalculaSalario.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/util/CompraGaragem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/CompraGaragem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/util/Transacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Transacao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/util/Venda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Venda.java" afterDir="false" />
@@ -21,28 +39,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/Venda.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Teste.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="54" selection-end-column="5" />
+            <state relative-caret-position="137">
+              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#Venda#1;class#Venda#0" />
-                <element signature="method#verificaValorVendasPorMesPorFuncionarioVendedor#0;class#Venda#0" />
-                <element signature="method#verificaValorVendasMensal#0;class#Venda#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/CompraGaragem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+            <state relative-caret-position="255">
+              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util/CadastraCarro.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
               <folding>
-                <element signature="method#CompraGaragem#0;class#CompraGaragem#0" />
+                <element signature="e#119#120#0" expanded="true" />
+                <element signature="e#158#159#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util/Transacao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#mostraVeiculosDisponíveis#0;class#Transacao#0" />
               </folding>
             </state>
           </provider>
@@ -73,25 +111,27 @@
         <option value="$PROJECT_DIR$/src/model/Pessoa.java" />
         <option value="$PROJECT_DIR$/src/model/Funcionário.java" />
         <option value="$PROJECT_DIR$/src/model/Cliente_Comprador.java" />
-        <option value="$PROJECT_DIR$/src/model/Marca.java" />
         <option value="$PROJECT_DIR$/src/util/Compra.java" />
         <option value="$PROJECT_DIR$/src/model/Funcionario.java" />
         <option value="$PROJECT_DIR$/src/util/CadastroVeiculo.java" />
         <option value="$PROJECT_DIR$/src/util/CompraCliente.java" />
-        <option value="$PROJECT_DIR$/src/Teste.java" />
+        <option value="$PROJECT_DIR$/src/model/Vendedor.java" />
         <option value="$PROJECT_DIR$/src/model/Cliente.java" />
         <option value="$PROJECT_DIR$/src/model/Gerente.java" />
+        <option value="$PROJECT_DIR$/src/model/Marca.java" />
+        <option value="$PROJECT_DIR$/src/util/RealizaOperacao.java" />
         <option value="$PROJECT_DIR$/src/util/CalculaSalario.java" />
-        <option value="$PROJECT_DIR$/src/model/Vendedor.java" />
+        <option value="$PROJECT_DIR$/src/util/Venda.java" />
+        <option value="$PROJECT_DIR$/src/util/Transacao.java" />
+        <option value="$PROJECT_DIR$/src/Teste.java" />
+        <option value="$PROJECT_DIR$/src/util/CompraGaragem.java" />
+        <option value="$PROJECT_DIR$/src/util/CadastraCarro.java" />
         <option value="$PROJECT_DIR$/src/model/Veiculo.java" />
         <option value="$PROJECT_DIR$/src/model/Modelo.java" />
-        <option value="$PROJECT_DIR$/src/util/Transacao.java" />
-        <option value="$PROJECT_DIR$/src/util/Venda.java" />
-        <option value="$PROJECT_DIR$/src/util/CompraGaragem.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="76" />
     <option name="y" value="20" />
     <option name="width" value="1280" />
@@ -188,15 +228,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573577046746</updated>
-      <workItem from="1573577051277" duration="10885000" />
+      <workItem from="1573577051277" duration="18523000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10885000" />
+    <option name="totallyTimeSpent" value="18523000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -234,16 +274,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/model/Endereco.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="method#Endereco#0;class#Endereco#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Cliente_Comprador.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -251,24 +281,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Marca.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/util/Compra.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Funcionario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -282,75 +298,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Gerente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="117" selection-start-line="14" selection-start-column="117" selection-end-line="14" selection-end-column="117" />
+          <folding>
+            <element signature="method#Gerente#0;class#Gerente#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Pessoa.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
+        <state relative-caret-position="-250">
           <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Teste.java">
+    <entry file="file://$PROJECT_DIR$/src/model/Endereco.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="4" selection-end-column="18" />
+        <state relative-caret-position="158">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="method#Endereco#1;class#Endereco#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Marca.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+          <folding>
+            <element signature="e#283#284#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Cliente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/CalculaSalario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        <state relative-caret-position="187">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#Cliente#1;class#Cliente#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Gerente.java">
+    <entry file="file://$PROJECT_DIR$/src/model/Funcionario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Modelo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="39" column="120" selection-start-line="39" selection-start-column="120" selection-end-line="39" selection-end-column="120" />
-          <folding>
-            <element signature="method#Modelo#0;class#Modelo#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Veiculo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="51" column="144" selection-start-line="51" selection-start-column="144" selection-end-line="51" selection-end-column="144" />
-          <folding>
-            <element signature="method#Veiculo#1;class#Veiculo#0" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Vendedor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="168">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding>
+            <element signature="method#Vendedor#0;class#Vendedor#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/Transacao.java">
+    <entry file="file://$PROJECT_DIR$/src/util/RealizaOperacao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+        <state relative-caret-position="17">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/CalculaSalario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -359,23 +382,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/Venda.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="54" selection-end-column="5" />
+        <state relative-caret-position="15">
+          <caret line="23" column="105" selection-start-line="23" selection-start-column="105" selection-end-line="23" selection-end-column="105" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Venda#1;class#Venda#0" />
-            <element signature="method#verificaValorVendasPorMesPorFuncionarioVendedor#0;class#Venda#0" />
+            <element signature="method#realizaVenda#0;class#Venda#0" />
+            <element signature="method#calculaSalario#0;class#Venda#0" />
             <element signature="method#verificaValorVendasMensal#0;class#Venda#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/Transacao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#mostraVeiculosDisponíveis#0;class#Transacao#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/CompraGaragem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        <state relative-caret-position="255">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/CadastraCarro.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
           <folding>
-            <element signature="method#CompraGaragem#0;class#CompraGaragem#0" />
+            <element signature="e#119#120#0" expanded="true" />
+            <element signature="e#158#159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Modelo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="39" column="93" selection-start-line="39" selection-start-column="93" selection-end-line="39" selection-end-column="93" />
+          <folding>
+            <element signature="method#Modelo#0;class#Modelo#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Veiculo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="51" column="61" selection-start-line="51" selection-start-column="61" selection-end-line="51" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Teste.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -12,8 +12,14 @@ public class Gerente extends Funcionario {
         this.porcentagemComissao = porcentagemComissao;
     }
 
-    public Gerente(int matricula){
+    public Gerente(int matricula, String nome, String dataNas, double cpf, String sexo, Endereco end, String telefone){
         setMatricula(matricula);
+        setNome(nome);
+        setDataNascimento(dataNas);
+        setCpf(cpf);
+        setSexo(sexo);
+        setEnd(end);
+        setTelefone(telefone);
     }
 
     public String toString(){

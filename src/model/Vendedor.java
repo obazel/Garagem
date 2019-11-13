@@ -12,8 +12,14 @@ public class Vendedor extends Funcionario {
         this.porcentagemComissao = porcentagemComissao;
     }
 
-    public Vendedor(int matricula){
+    public Vendedor(int matricula, String nome, String dataNas, double cpf, String sexo, Endereco end, String telefone){
         setMatricula(matricula);
+        setNome(nome);
+        setDataNascimento(dataNas);
+        setCpf(cpf);
+        setSexo(sexo);
+        setEnd(end);
+        setTelefone(telefone);
     }
 
     public String toString(){

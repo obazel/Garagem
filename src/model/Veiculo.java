@@ -49,6 +49,6 @@ public class Veiculo {
     }
 
     public String toString(){
-        return "|====| VEÍCULO |====|" + "\nCor: " + getCor() + "\nModelo: " + getModelo() + "\nValor: " + getValor() + "\nPlaca: " + getPlaca();
+        return "|====| VEÍCULO |====|" + "\nCor: " + getCor() + "\n" + getModelo() + "\nValor: " + getValor() + "\nPlaca: " + getPlaca();
     }
 }

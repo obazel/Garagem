@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Cliente extends Pessoa {
+public class Cliente extends Pessoa {
     private int id;
 
     public int getId() {
@@ -13,13 +13,19 @@ public abstract class Cliente extends Pessoa {
 
     public Cliente(){}
 
-    public Cliente(int id){
+    public Cliente(int id, String nome, String dataNas, double cpf, String sexo, Endereco end, String telefone){
         setId(id);
+        setNome(nome);
+        setDataNascimento(dataNas);
+        setCpf(cpf);
+        setSexo(sexo);
+        setEnd(end);
+        setTelefone(telefone);
     }
 
     public String toString(){
         return "|====| CLIENTE |====|" + "\nID: " + getId() + "\nNome: " + getNome() + "\nSexo: " + getSexo() + "\nCPF: " + getCpf() +
-                "Data de nascimento: " + getDataNascimento() + "\nTelefone: " + getTelefone() + "\nEndereço: " +
+                "\nData de nascimento: " + getDataNascimento() + "\nTelefone: " + getTelefone() + "\nEndereço: " +
                 getEnd();
     }
 }

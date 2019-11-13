@@ -1,6 +1,7 @@
 package util;
 
 import model.Cliente;
+import model.Funcionario;
 import model.Veiculo;
 import model.Vendedor;
 
@@ -10,22 +11,13 @@ import java.util.List;
 
 public abstract class Transacao {
     //Lista de veículos disponíveis para venda.
-    public List<Veiculo> veiculosDisponiveis = new ArrayList<>();
+    protected List<Veiculo> veiculosDisponiveis = new ArrayList<>();
 
     //Todas as transações devem conter os seguintes elementos.
     private int id;
     private Cliente cliente;
     private Veiculo veiculo;
-    private Vendedor vendedor;
-    private int mes;
-
-    public int getMes() {
-        return mes;
-    }
-
-    public void setMes(int mes) {
-        this.mes = mes;
-    }
+    private Funcionario vendedor;
 
     public Cliente getCliente() {
         return cliente;
@@ -43,11 +35,11 @@ public abstract class Transacao {
         this.veiculo = veiculo;
     }
 
-    public Vendedor getVendedor() {
+    public Funcionario getVendedor() {
         return vendedor;
     }
 
-    public void setVendedor(Vendedor vendedor) {
+    public void setVendedor(Funcionario vendedor) {
         this.vendedor = vendedor;
     }
 
@@ -57,5 +49,11 @@ public abstract class Transacao {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public void mostraVeiculosDisponíveis(){
+        for(Veiculo v : veiculosDisponiveis){
+            System.out.println(v.toString());
+        }
     }
 }
