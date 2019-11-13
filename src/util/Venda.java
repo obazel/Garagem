@@ -27,19 +27,9 @@ public class Venda extends Transacao {
         setVendedor(vendedor);
         setVeiculo(veiculoVendido);
         setMes(mes);
-
-        this.veiculosDisponiveis.remove(veiculoVendido);
     }
 
     public Venda(){}
-
-    public void realizaVenda(Venda venda, boolean opcao){
-        if(opcao){
-            this.vendas.add(venda);
-        }else{
-            System.out.println("Operação Cancelada");
-        }
-    }
 
     public void calculaSalario(Funcionario funcionario, int mes){
 

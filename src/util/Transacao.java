@@ -3,13 +3,12 @@ package util;
 import model.Cliente;
 import model.Funcionario;
 import model.Veiculo;
-import model.Vendedor;
-
 
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Transacao {
+public class Transacao {
+
     //Lista de veículos disponíveis para venda.
     protected List<Veiculo> veiculosDisponiveis = new ArrayList<>();
 
@@ -51,9 +50,17 @@ public abstract class Transacao {
         this.id = id;
     }
 
-    public void mostraVeiculosDisponíveis(){
+    public void adicionaVeiculo(Veiculo v){
+        this.veiculosDisponiveis.add(v);
+    }
+
+    public void mostraVeiculos(){
         for(Veiculo v : veiculosDisponiveis){
             System.out.println(v.toString());
         }
+    }
+
+    public void removeVeiculo(Veiculo v){
+        this.veiculosDisponiveis.remove(v);
     }
 }

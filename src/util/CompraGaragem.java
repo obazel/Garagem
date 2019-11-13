@@ -28,9 +28,6 @@ public class CompraGaragem extends Transacao{
         setVendedor(vendedor);
         setVeiculo(veiculoComprado);
         setMes(mes);
-
-        veiculosDisponiveis.add(veiculoComprado);
-        this.veiculosComprados.add(veiculoComprado);
     }
 
     public String toString(){
