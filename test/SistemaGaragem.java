@@ -12,8 +12,10 @@ import util.Cadastramento;
  *
  * @author Matheus Henrick
  */
-public class Teste {
+public class SistemaGaragem {
     public static void main(String[] args){
+        
+        //Criando objetos para teste
         Cliente c = new Cliente();
         
         c.setNome("Matheus Henrick");
@@ -51,6 +53,7 @@ public class Teste {
         vendedor.setEnd("Rua B, Quadra 16 - Monções, Goiânia, GO.");
         vendedor.setTelefone("(62) 9 9188-2936");
         
+        //Adicionando objetos ás listas
         Cadastramento.adicionaCliente(c);
         Cadastramento.adicionaVeiculo(v);
         Cadastramento.adicionaMarca(marca);
@@ -58,7 +61,7 @@ public class Teste {
         Cadastramento.adicionaVendedor(vendedor);
         
         
-        //Main de verdade
+        //Onde a coisa acontece
         Menu m = new Menu();
         m.setVisible(true);
         
