@@ -65,6 +65,11 @@ public class Menu extends javax.swing.JFrame {
         });
 
         botaoComprar.setText("Comprar");
+        botaoComprar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botaoComprarMouseClicked(evt);
+            }
+        });
 
         botaoCadastrarCliente.setText("Cadastrar Cliente");
         botaoCadastrarCliente.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -151,6 +156,11 @@ public class Menu extends javax.swing.JFrame {
         c.setVisible(true);
         
     }//GEN-LAST:event_botaoCadastrarCarroMouseClicked
+
+    private void botaoComprarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoComprarMouseClicked
+        RegistraCompra c = new RegistraCompra();
+        c.setVisible(true);
+    }//GEN-LAST:event_botaoComprarMouseClicked
 
     /**
      * @param args the command line arguments

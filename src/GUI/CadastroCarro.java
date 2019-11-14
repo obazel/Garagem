@@ -61,6 +61,7 @@ public class CadastroCarro extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         setSize(new java.awt.Dimension(500, 500));
 
         jLabel1.setFont(new java.awt.Font("Century", 0, 36)); // NOI18N
