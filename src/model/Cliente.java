@@ -12,8 +12,10 @@ public class Cliente extends Pessoa {
     }
 
     public Cliente(){}
-
-    public Cliente(int id, String nome, String dataNas, double cpf, String sexo, Endereco end, String telefone){
+    
+    public Cliente(String cpf){ setCpf(cpf); }
+ 
+    public Cliente(int id, String nome, String dataNas, String cpf, String sexo, String end, String telefone){
         setId(id);
         setNome(nome);
         setDataNascimento(dataNas);
@@ -22,6 +24,7 @@ public class Cliente extends Pessoa {
         setEnd(end);
         setTelefone(telefone);
     }
+    
 
     public String toString(){
         return "|====| CLIENTE |====|" + "\nID: " + getId() + "\nNome: " + getNome() + "\nSexo: " + getSexo() + "\nCPF: " + getCpf() +

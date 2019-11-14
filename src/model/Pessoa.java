@@ -7,9 +7,9 @@ public abstract class Pessoa {
     //Atributos
 
     private String nome;
-    private double cpf;
+    private String cpf;
     private String dataNascimento; //Mudar para Date.
-    private Endereco end; //Podemos mudar para a funcionalidade dos Correios.
+    private String end; //Podemos mudar para a funcionalidade dos Correios.
     private String telefone;
     private String sexo;
 
@@ -21,11 +21,11 @@ public abstract class Pessoa {
         this.nome = nome;
     }
 
-    public double getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(double cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
@@ -37,11 +37,11 @@ public abstract class Pessoa {
         this.dataNascimento = dataNascimento;
     }
 
-    public Endereco getEnd() {
+    public String getEnd() {
         return end;
     }
 
-    public void setEnd(Endereco end) {
+    public void setEnd(String end) {
         this.end = end;
     }
 

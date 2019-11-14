@@ -2,22 +2,7 @@ package util;
 
 import model.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class CompraGaragem extends Transacao{
-
-    public List<Veiculo> veiculosComprados = new ArrayList<>();
-
-    private int mes;
-
-    public int getMes() {
-        return mes;
-    }
-
-    public void setMes(int mes) {
-        this.mes = mes;
-    }
 
     public CompraGaragem(){}
 

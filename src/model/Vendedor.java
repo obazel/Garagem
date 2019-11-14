@@ -12,7 +12,7 @@ public class Vendedor extends Funcionario {
         this.porcentagemComissao = porcentagemComissao;
     }
 
-    public Vendedor(int matricula, String nome, String dataNas, double cpf, String sexo, Endereco end, String telefone){
+    public Vendedor(int matricula, String nome, String dataNas, String cpf, String sexo, String end, String telefone){
         setMatricula(matricula);
         setNome(nome);
         setDataNascimento(dataNas);
@@ -22,9 +22,11 @@ public class Vendedor extends Funcionario {
         setTelefone(telefone);
     }
 
+    public Vendedor(){}
+    
     public String toString(){
         return "|====| VENDEDOR |====|" + "\nMatrícula: " + getMatricula() + "\nNome: " + getNome() + "\nSexo: " + getSexo() + "\nCPF: " + getCpf() +
-                "Data de nascimento: " + getDataNascimento() + "\nTelefone: " + getTelefone() + "\nEndereço: " +
+                "\nData de nascimento: " + getDataNascimento() + "\nTelefone: " + getTelefone() + "\nEndereço: " +
                 getEnd() + "";
     }
 }

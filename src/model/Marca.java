@@ -12,10 +12,12 @@ public class Marca {
         this.nome = nome;
     }
 
+    public Marca(){}
+    
     public Marca(String nome){
         setNome(nome);
     }
-
+    
     public String toString(){
         return "|====| MARCA |====|" + "\nNome: " + getNome();
     }

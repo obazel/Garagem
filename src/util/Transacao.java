@@ -4,19 +4,23 @@ import model.Cliente;
 import model.Funcionario;
 import model.Veiculo;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Transacao {
-
-    //Lista de veículos disponíveis para venda.
-    protected List<Veiculo> veiculosDisponiveis = new ArrayList<>();
 
     //Todas as transações devem conter os seguintes elementos.
     private int id;
     private Cliente cliente;
     private Veiculo veiculo;
     private Funcionario vendedor;
+    private int mes;
+
+    public int getMes() {
+        return mes;
+    }
+
+    public void setMes(int mes) {
+        this.mes = mes;
+    }
+
 
     public Cliente getCliente() {
         return cliente;
@@ -48,19 +52,5 @@ public class Transacao {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public void adicionaVeiculo(Veiculo v){
-        this.veiculosDisponiveis.add(v);
-    }
-
-    public void mostraVeiculos(){
-        for(Veiculo v : veiculosDisponiveis){
-            System.out.println(v.toString());
-        }
-    }
-
-    public void removeVeiculo(Veiculo v){
-        this.veiculosDisponiveis.remove(v);
     }
 }

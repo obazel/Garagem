@@ -29,13 +29,15 @@ public class Modelo {
     public void setNomeModelo(String nome) {
         this.nomeModelo = nome;
     }
+    
+    public Modelo(){}
 
     public Modelo(int ano, Marca marca, String nomeModelo){
         setAno(ano);
         setMarca(marca);
         setNomeModelo(nomeModelo);
     }
-
+    
     public String toString(){
         return "|====| MODELO |====|" + "\nModelo: " + getNomeModelo() + "\nAno: " + getAno() + "\n" + getMarca();
     }
