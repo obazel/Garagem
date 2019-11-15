@@ -83,6 +83,58 @@ public class Cadastramento {
         return c;
     }
     
+    //Lista de gerentes
+    public static List<Gerente> gerentes = new ArrayList<Gerente>();
+    
+    public static void adicionaGerente(Gerente g){
+        gerentes.add(g);
+    }
+
+    public static String mostraGerentes(){
+        String s = "";
+        for(Gerente gerente : gerentes){
+           s = gerente.toString();
+        }
+        return s;
+    }
+    
+    public static boolean existeGerente(int matricula){
+        boolean opc = false;
+        for(Gerente gerente : gerentes){
+            if(gerente.getMatricula() == matricula){
+                opc = true;
+            }
+            break;
+        }
+        return opc;
+    }
+    
+    public static Gerente procuraGerente(int matricula){
+        
+        Gerente g = new Gerente();
+        
+        for(Gerente gerente : gerentes){
+            if(gerente.getMatricula() == matricula){
+                g = gerente;
+            }
+            break;
+        }
+        return g;
+    }
+    
+    public static Gerente procuraGerenteNome(String nome){
+        
+        Gerente g = new Gerente();
+        
+        for(Gerente gerente : gerentes){
+            if(gerente.getNome() == nome){
+                g = gerente;
+            }
+            break;
+        }
+        return g;
+    }
+    
     //Lista de vendedores
     public static List<Vendedor> vendedores = new ArrayList<Vendedor>();
     
@@ -122,12 +174,12 @@ public class Cadastramento {
         return v;
     }
     
-    public static Vendedor procuraVendedorNome(String matricula){
+    public static Vendedor procuraVendedorNome(String nome){
         
         Vendedor v = new Vendedor();
         
         for(Vendedor vendedor : vendedores){
-            if(vendedor.getNome() == matricula){
+            if(vendedor.getNome() == nome){
                 v = vendedor;
             }
             break;
