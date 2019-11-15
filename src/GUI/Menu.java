@@ -48,6 +48,7 @@ public class Menu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setIconImage(new javax.swing.ImageIcon(getClass().getResourse("programicon2.png")););
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Century", 0, 36)); // NOI18N
