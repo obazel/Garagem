@@ -221,6 +221,7 @@ public class CadastroCliente extends javax.swing.JFrame {
             Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(inserirID.getText()), inserirNome.getText(), inserirDataNasc.getText(), inserirCPF.getText(), "Feminino", inserirEndereco.getText(), inserirTelefone.getText()));
         }
         
+        dispose();
     }//GEN-LAST:event_clicarBotaoCadastrar
 
     /**

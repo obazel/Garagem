@@ -28,10 +28,12 @@ public class Cadastramento {
         marcas.add(m);
     }
     
-    public static void mostraMarcas(){
+    public static String mostraMarcas(){
+        String s = "";
         for(Marca marca : marcas){
-            System.out.println(marca.toString());
+            s = marca.toString();
         }
+        return s;
     }
     
     //Lista de Modelos
@@ -41,10 +43,12 @@ public class Cadastramento {
         modelos.add(m);
     }
     
-    public static void mostraModelo(){
+    public static String mostraModelo(){
+        String s = "";
         for(Modelo modelo : modelos){
-            System.out.println(modelo.toString());
+            s = modelo.toString();
         }
+        return s;
     }
     
     //Lista de Clientes
@@ -67,7 +71,6 @@ public class Cadastramento {
             if(cliente.getCpf().equalsIgnoreCase(cpf)){
                 opc = true;
             }
-            break;
         }
         return opc;
     }
@@ -78,7 +81,6 @@ public class Cadastramento {
             if(cliente.getCpf().equalsIgnoreCase(cpf)){
                 c = cliente;
             }
-            break;
         }
         return c;
     }
@@ -104,7 +106,6 @@ public class Cadastramento {
             if(gerente.getMatricula() == matricula){
                 opc = true;
             }
-            break;
         }
         return opc;
     }
@@ -117,7 +118,6 @@ public class Cadastramento {
             if(gerente.getMatricula() == matricula){
                 g = gerente;
             }
-            break;
         }
         return g;
     }
@@ -130,7 +130,6 @@ public class Cadastramento {
             if(gerente.getNome() == nome){
                 g = gerente;
             }
-            break;
         }
         return g;
     }
@@ -156,7 +155,6 @@ public class Cadastramento {
             if(vendedor.getMatricula() == matricula){
                 opc = true;
             }
-            break;
         }
         return opc;
     }
@@ -169,7 +167,6 @@ public class Cadastramento {
             if(vendedor.getMatricula() == matricula){
                 v = vendedor;
             }
-            break;
         }
         return v;
     }
@@ -182,7 +179,6 @@ public class Cadastramento {
             if(vendedor.getNome() == nome){
                 v = vendedor;
             }
-            break;
         }
         return v;
     }
@@ -208,7 +204,6 @@ public class Cadastramento {
             if(compra.getId() == id){
                 opc = true;
             }
-            break;
         }
         return opc;
     }
@@ -221,7 +216,6 @@ public class Cadastramento {
             if(compra.getId() == id){
                 v = compra;
             }
-            break;
         }
         return v;
     }
@@ -229,9 +223,35 @@ public class Cadastramento {
     
     //Lista de Veículos
     public static List<Veiculo> veiculos = new ArrayList<Veiculo>();
+    public static List<Veiculo> veiculosDisponiveis = new ArrayList<Veiculo>();
+    public static List<Veiculo> veiculosVendidos = new ArrayList<Veiculo>();
     
     public static void adicionaVeiculo(Veiculo v){
         veiculos.add(v);
+    }
+    
+    public static void adicionaVeiculoDisponivel(Veiculo v){
+        veiculosDisponiveis.add(v);
+    }
+    
+    public static void removeVeiculoDisponivel(Veiculo v){
+        veiculosDisponiveis.remove(v);
+    }
+    
+    public static String mostraVeiculosDisponiveis(){
+        String s = "";
+        for(Veiculo veiculo : veiculosDisponiveis){
+            s = veiculo.toString();
+        }
+        return s;
+    }
+    
+    public static String mostraVeiculos(){
+        String s = "";
+        for(Veiculo veiculo : veiculos){
+            s = veiculo.toString();
+        }
+        return s;
     }
     
     public static boolean existeVeiculo(String placa){
@@ -240,7 +260,6 @@ public class Cadastramento {
             if(veiculo.getPlaca().equalsIgnoreCase(placa)){
                 opc = true;
             }
-            break;
         }
         return opc;
     }
@@ -252,7 +271,6 @@ public class Cadastramento {
             if(veiculo.getPlaca().equalsIgnoreCase(placa)){
                 v = veiculo;
             }
-            break;
         }
         return v;
     }

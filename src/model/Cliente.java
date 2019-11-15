@@ -27,8 +27,13 @@ public class Cliente extends Pessoa {
     
 
     public String toString(){
-        return "|====| CLIENTE |====|" + "\nID: " + getId() + "\nNome: " + getNome() + "\nSexo: " + getSexo() + "\nCPF: " + getCpf() +
-                "\nData de nascimento: " + getDataNascimento() + "\nTelefone: " + getTelefone() + "\nEndereço: " +
-                getEnd();
+        return "\n» CLIENTE «" +
+                "\n  »»ID: " + getId() + 
+                "\n  »»Nome: " + getNome() + 
+                "\n  »»Sexo: " + getSexo() + 
+                "\n  »»CPF: " + getCpf() +
+                "\n  »»Data de nascimento: " + getDataNascimento() + 
+                "\n  »»Telefone: " + getTelefone() + 
+                "\n  »»Endereço: " + getEnd();
     }
 }

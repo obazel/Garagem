@@ -25,9 +25,14 @@ public class Gerente extends Funcionario {
     public Gerente(){}
 
     public String toString(){
-        return "|====| GERENTE |====|" + "\nMatrícula: " + getMatricula() + "\nNome: " + getNome() + "\nSexo: " + getSexo() + "\nCPF: " + getCpf() +
-                "Data de nascimento: " + getDataNascimento() + "\nTelefone: " + getTelefone() + "\nEndereço: " +
-                getEnd() + "";
+        return "\n» GERENTE «" +
+                "\n  »»Matrícula: " + getMatricula() + 
+                "\n  »»Nome: " + getNome() + 
+                "\n  »»Sexo: " + getSexo() + 
+                "\n  »»CPF: " + getCpf() +
+                "\n  »»Data de nascimento: " + getDataNascimento() + 
+                "\n  »»Telefone: " + getTelefone() + 
+                "\n  »»Endereço: " + getEnd();
     }
 
 }

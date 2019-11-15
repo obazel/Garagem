@@ -19,6 +19,7 @@ public class Marca {
     }
     
     public String toString(){
-        return "|====| MARCA |====|" + "\nNome: " + getNome();
+        return "\n» MARCA «" +
+                "\n  »»Nome: " + getNome();
     }
 }

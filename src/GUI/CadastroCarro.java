@@ -204,7 +204,7 @@ public class CadastroCarro extends javax.swing.JFrame {
         veiculo.setValor(Double.parseDouble(inserirValor.getText()));
         
         Cadastramento.adicionaVeiculo(veiculo);
-        
+        Cadastramento.adicionaVeiculoDisponivel(veiculo);
         
         inserirMarca.setText("");
         inserirModelo.setText("");

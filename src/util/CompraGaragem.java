@@ -16,7 +16,11 @@ public class CompraGaragem extends Transacao{
     }
 
     public String toString(){
-        return "|====| COMPRA |====|" + "\nID: " + getId() +"\nCliente: " + getCliente().getNome() + "\n" + getVeiculo().toString()  +
-                "\n" + getVendedor().toString() + "\nMês: " + getMes();
+        return "\n» COMPRA REGISTRADA «" +
+                "\n  »»ID: " + getId() + 
+                "\n  »»Mês: " + getMes() + 
+                getCliente() +
+                getVeiculo() +
+                getVendedor();
     }
 }

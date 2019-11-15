@@ -17,8 +17,12 @@ public class Venda extends Transacao {
     public Venda(){}
 
     public String toString(){
-        return "| Venda |" + "\nID: " + getId() +"\nCliente: " + getCliente().getNome() + "\n" + getVeiculo().toString()  +
-                "\n " + "Vendedor: " + getVendedor() + "\nMês: " + getMes();
+        return "\n» VENDA REGISTRADA «" +
+                "\n  »»ID: " + getId() + 
+                "\n  »»Mês: " + getMes() + 
+                getCliente() +
+                getVeiculo() +
+                getVendedor();
     }
 
 }

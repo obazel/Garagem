@@ -25,8 +25,13 @@ public class Vendedor extends Funcionario {
     public Vendedor(){}
     
     public String toString(){
-        return "|====| VENDEDOR |====|" + "\nMatrícula: " + getMatricula() + "\nNome: " + getNome() + "\nSexo: " + getSexo() + "\nCPF: " + getCpf() +
-                "\nData de nascimento: " + getDataNascimento() + "\nTelefone: " + getTelefone() + "\nEndereço: " +
-                getEnd() + "";
+        return "\n» VENDEDOR «" +
+                "\n  »»Matrícula: " + getMatricula() + 
+                "\n  »»Nome: " + getNome() + 
+                "\n  »»Sexo: " + getSexo() + 
+                "\n  »»CPF: " + getCpf() +
+                "\n  »»Data de nascimento: " + getDataNascimento() + 
+                "\n  »»Telefone: " + getTelefone() + 
+                "\n  »»Endereço: " + getEnd();
     }
 }

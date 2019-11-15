@@ -6,6 +6,12 @@
 package GUI;
 
 import java.awt.Toolkit;
+import model.Cliente;
+import model.Marca;
+import model.Modelo;
+import model.Veiculo;
+import model.Vendedor;
+import util.Cadastramento;
 
 /**
  *
@@ -21,6 +27,52 @@ public class Menu extends javax.swing.JFrame {
         setTitle("GARAGEM");
         setLocationRelativeTo(null);
         setIcon();
+        
+        //Criando objetos para teste
+        Cliente c = new Cliente();
+        
+        c.setNome("Matheus Henrick");
+        c.setSexo("Masculino");
+        c.setDataNascimento("08/02/1999");
+        c.setCpf("043.545.571-00");
+        c.setId(1);
+        c.setTelefone("(62) 9 9299-9449 ");
+        c.setEnd("Avenida Maria Pestana, QD 77 LT 7 - Jardim Balneário M. Ponte");
+        
+        Marca marca = new Marca();
+        
+        marca.setNome("Volkswagem");
+        
+        Modelo modelo = new Modelo();
+        
+        modelo.setMarca(marca);
+        modelo.setNomeModelo("Gol");
+        modelo.setAno(2008);
+        
+        Veiculo v = new Veiculo();
+        
+        v.setPlaca("NLA-1194");
+        v.setCor("Vermelho");
+        v.setValor(12500);
+        v.setModelo(modelo);
+        
+        Vendedor vendedor = new Vendedor();
+        
+        vendedor.setMatricula(1);
+        vendedor.setCpf("001.532.173-27");
+        vendedor.setDataNascimento("10/11/1981");
+        vendedor.setNome("Lorena Larissa");
+        vendedor.setSexo("Feminino");
+        vendedor.setEnd("Rua B, Quadra 16 - Monções, Goiânia, GO.");
+        vendedor.setTelefone("(62) 9 9188-2936");
+        
+        //Adicionando objetos ás listas
+        Cadastramento.adicionaCliente(c);
+        Cadastramento.adicionaVeiculo(v);
+        Cadastramento.adicionaVeiculoDisponivel(v);
+        Cadastramento.adicionaMarca(marca);
+        Cadastramento.adicionaModelo(modelo);
+        Cadastramento.adicionaVendedor(vendedor);
         
     }
 
@@ -41,6 +93,7 @@ public class Menu extends javax.swing.JFrame {
         botaoCadastrarCliente = new javax.swing.JButton();
         botaoCadastrarCarro = new javax.swing.JButton();
         botaoCadastrarFuncionario = new javax.swing.JButton();
+        botaoRelatorios = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -89,6 +142,13 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
+        botaoRelatorios.setText("Relatórios");
+        botaoRelatorios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botaoRelatoriosMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -109,7 +169,9 @@ public class Menu extends javax.swing.JFrame {
                             .addComponent(botaoCadastrarFuncionario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(botaoComprar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botaoRelatorios, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(botaoComprar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -128,7 +190,9 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(botaoVender, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botaoComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 9, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(botaoRelatorios, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -139,9 +203,7 @@ public class Menu extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -177,6 +239,11 @@ public class Menu extends javax.swing.JFrame {
         CadastroFuncionario c = new CadastroFuncionario();
         c.setVisible(true);
     }//GEN-LAST:event_botaoCadastrarFuncionarioMouseClicked
+
+    private void botaoRelatoriosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoRelatoriosMouseClicked
+        Relatorio r = new Relatorio();
+        r.setVisible(true);
+    }//GEN-LAST:event_botaoRelatoriosMouseClicked
 
     /**
      * @param args the command line arguments
@@ -218,6 +285,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton botaoCadastrarCliente;
     private javax.swing.JButton botaoCadastrarFuncionario;
     private javax.swing.JButton botaoComprar;
+    private javax.swing.JButton botaoRelatorios;
     private javax.swing.JButton botaoVender;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

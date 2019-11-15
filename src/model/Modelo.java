@@ -39,6 +39,10 @@ public class Modelo {
     }
     
     public String toString(){
-        return "|====| MODELO |====|" + "\nModelo: " + getNomeModelo() + "\nAno: " + getAno() + "\n" + getMarca();
+        return "\n» MODELO «" +
+                "\n  »»Ano: " + getAno() +
+                "\n  »»Nome: " + getNomeModelo() +
+                getMarca().toString();
+                
     }
 }

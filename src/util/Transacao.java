@@ -4,7 +4,7 @@ import model.Cliente;
 import model.Funcionario;
 import model.Veiculo;
 
-public class Transacao {
+public abstract class Transacao {
 
     //Todas as transações devem conter os seguintes elementos.
     private int id;
