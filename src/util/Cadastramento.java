@@ -29,11 +29,7 @@ public class Cadastramento {
     }
     
     public static String mostraMarcas(){
-        String s = "";
-        for(Marca marca : marcas){
-            s = marca.toString();
-        }
-        return s;
+        return marcas.toString();
     }
     
     //Lista de Modelos
@@ -44,11 +40,7 @@ public class Cadastramento {
     }
     
     public static String mostraModelo(){
-        String s = "";
-        for(Modelo modelo : modelos){
-            s = modelo.toString();
-        }
-        return s;
+        return modelos.toString();
     }
     
     //Lista de Clientes
@@ -58,11 +50,8 @@ public class Cadastramento {
         clientes.add(c);
     }
 
-    public static void mostraClientes(){
-        for(Cliente cliente : clientes){
-            System.out.println(cliente.toString());
-        }
-        
+    public static String mostraClientes(){
+        return clientes.toString();
     }
     
     public static boolean existeCliente(String cpf){
@@ -93,11 +82,7 @@ public class Cadastramento {
     }
 
     public static String mostraGerentes(){
-        String s = "";
-        for(Gerente gerente : gerentes){
-           s = gerente.toString();
-        }
-        return s;
+        return gerentes.toString();
     }
     
     public static boolean existeGerente(int matricula){
@@ -142,11 +127,7 @@ public class Cadastramento {
     }
 
     public static String mostraVendedores(){
-        String s = "";
-        for(Vendedor vendedor : vendedores){
-           s = vendedor.toString();
-        }
-        return s;
+        return vendedores.toString();
     }
     
     public static boolean existeVendedor(int matricula){
@@ -191,11 +172,7 @@ public class Cadastramento {
     }
 
     public static String mostraCompraGaragem(){
-        String s = "";
-        for(CompraGaragem compra : compras){
-           s = compra.toString();
-        }
-        return s;
+        return compras.toString();
     }
     
     public static boolean existeCompraGaragem(int id){
@@ -239,19 +216,11 @@ public class Cadastramento {
     }
     
     public static String mostraVeiculosDisponiveis(){
-        String s = "";
-        for(Veiculo veiculo : veiculosDisponiveis){
-            s = veiculo.toString();
-        }
-        return s;
+        return veiculosDisponiveis.toString();
     }
     
     public static String mostraVeiculos(){
-        String s = "";
-        for(Veiculo veiculo : veiculos){
-            s = veiculo.toString();
-        }
-        return s;
+        return veiculos.toString();
     }
     
     public static boolean existeVeiculo(String placa){
@@ -283,11 +252,7 @@ public class Cadastramento {
     }
     
     public static String mostraVendas(){
-        String s = "";
-        for(Venda venda : vendas){
-            s = venda.toString();
-        }
-        return s;
+        return vendas.toString();
     }
     
     //Calculo de salários

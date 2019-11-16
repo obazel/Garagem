@@ -25,6 +25,7 @@ public class Relatorio extends javax.swing.JFrame {
         setIcon();
         
         caixaRelatorio.addItem("Relatório de Vendas");
+        caixaRelatorio.addItem("Relatório de Clientes");
         caixaRelatorio.addItem("Relatório de Compras");
         caixaRelatorio.addItem("Relatório de Gerentes");
         caixaRelatorio.addItem("Relatório de Vendedores");
@@ -141,6 +142,10 @@ public class Relatorio extends javax.swing.JFrame {
         if(s.equalsIgnoreCase("relatório de veículos disponíveis")){
            
             paneMostraRelatorio.setText(Cadastramento.mostraVeiculosDisponiveis());
+        }
+        if(s.equalsIgnoreCase("relatório de clientes")){
+           
+            paneMostraRelatorio.setText(Cadastramento.mostraClientes());
         }
         
     }//GEN-LAST:event_botaoGeraRelatórioMouseClicked
