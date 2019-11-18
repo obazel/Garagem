@@ -211,9 +211,6 @@ public class CadastroCliente extends javax.swing.JFrame {
     
     private void clicarBotaoCadastrar(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clicarBotaoCadastrar
 
-        if(1==1){
-            System.out.println("hello");
-        }
         if(selecionaMasc.isSelected()){
             Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(inserirID.getText()), inserirNome.getText(), inserirDataNasc.getText(), inserirCPF.getText(), "Masculino", inserirEndereco.getText(), inserirTelefone.getText()));
         }
