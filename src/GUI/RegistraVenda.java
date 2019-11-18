@@ -215,6 +215,7 @@ public class RegistraVenda extends javax.swing.JFrame {
                 
                 Cadastramento.adicionaVenda(venda);
                 Cadastramento.removeVeiculoDisponivel(venda.getVeiculo());
+                Cadastramento.adicionaVeiculosVendidos(venda.getVeiculo());
                 
             }else{
                 

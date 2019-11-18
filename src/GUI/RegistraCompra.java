@@ -192,6 +192,7 @@ public class RegistraCompra extends javax.swing.JFrame {
                 
  
                 Cadastramento.adicionaCompraGaragem(compra);
+                Cadastramento.adicionaVeiculoDisponivel(compra.getVeiculo());
                 
             }else{
                 

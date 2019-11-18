@@ -219,6 +219,18 @@ public class Cadastramento {
         return veiculosDisponiveis.toString();
     }
     
+    public static void adicionaVeiculosVendidos(Veiculo v){
+        veiculosVendidos.add(v);
+    }
+    
+    public static void removeVeiculosVendidos(Veiculo v){
+        veiculosVendidos.remove(v);
+    }
+    
+    public static String mostraVeiculosVendidos(){
+        return veiculosVendidos.toString();
+    }
+    
     public static String mostraVeiculos(){
         return veiculos.toString();
     }

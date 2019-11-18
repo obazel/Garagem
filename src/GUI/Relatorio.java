@@ -25,11 +25,12 @@ public class Relatorio extends javax.swing.JFrame {
         setIcon();
         
         caixaRelatorio.addItem("Relatório de Vendas");
-        caixaRelatorio.addItem("Relatório de Clientes");
+        caixaRelatorio.addItem("Lista de Clientes");
         caixaRelatorio.addItem("Relatório de Compras");
-        caixaRelatorio.addItem("Relatório de Gerentes");
-        caixaRelatorio.addItem("Relatório de Vendedores");
-        caixaRelatorio.addItem("Relatório de Veículos Disponíveis");
+        caixaRelatorio.addItem("Lista de Gerentes");
+        caixaRelatorio.addItem("Lista de Vendedores");
+        caixaRelatorio.addItem("Lista de Veículos Disponíveis");
+        caixaRelatorio.addItem("Lista de Veículos Vendidos");
     }
 
     /**
@@ -146,6 +147,10 @@ public class Relatorio extends javax.swing.JFrame {
         if(s.equalsIgnoreCase("relatório de clientes")){
            
             paneMostraRelatorio.setText(Cadastramento.mostraClientes());
+        }
+        if(s.equalsIgnoreCase("Lista de Veículos Vendidos")){
+           
+            paneMostraRelatorio.setText(Cadastramento.mostraVeiculosVendidos());
         }
         
     }//GEN-LAST:event_botaoGeraRelatórioMouseClicked
