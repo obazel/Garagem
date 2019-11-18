@@ -5,9 +5,6 @@
  */
 package GUI;
 
-import GUI.Menu;
-import GUI.Menu;
-import GUI.Menu;
 import java.awt.Toolkit;
 import model.Cliente;
 import util.Cadastramento;
