@@ -31,6 +31,7 @@ public class Cadastramento {
     public static String mostraMarcas(){
         return marcas.toString();
     }
+    //Fim de Lista de Marcas
     
     //Lista de Modelos
     public static List<Modelo> modelos = new ArrayList<Modelo>();
@@ -42,6 +43,7 @@ public class Cadastramento {
     public static String mostraModelo(){
         return modelos.toString();
     }
+    //Fim de Lista de Modelos
     
     //Lista de Clientes
     public static List<Cliente> clientes = new ArrayList<Cliente>();
@@ -73,8 +75,9 @@ public class Cadastramento {
         }
         return c;
     }
+    //Fim de Lista de Clientes
     
-    //Lista de gerentes
+    //Lista de Gerentes
     public static List<Gerente> gerentes = new ArrayList<Gerente>();
     
     public static void adicionaGerente(Gerente g){
@@ -118,8 +121,9 @@ public class Cadastramento {
         }
         return g;
     }
+    //Fim de Lista de Gerentes
     
-    //Lista de vendedores
+    //Lista de Vendedores
     public static List<Vendedor> vendedores = new ArrayList<Vendedor>();
     
     public static void adicionaVendedor(Vendedor v){
@@ -163,8 +167,9 @@ public class Cadastramento {
         }
         return v;
     }
+    //Fim de Lista de Vendedores
     
-    //Lista de compras da garagem
+    //Lista de Compra da Garagem
     public static List<CompraGaragem> compras = new ArrayList<CompraGaragem>();
     
     public static void adicionaCompraGaragem(CompraGaragem v){
@@ -196,7 +201,7 @@ public class Cadastramento {
         }
         return v;
     }
-    
+    //Fim de Lista de Compra da Garagem
     
     //Lista de Veículos
     public static List<Veiculo> veiculos = new ArrayList<Veiculo>();
@@ -255,6 +260,7 @@ public class Cadastramento {
         }
         return v;
     }
+    //Fim de Lista de Veículos
     
     //Lista de Vendas
     private static List<Venda> vendas = new ArrayList<>();
@@ -266,6 +272,7 @@ public class Cadastramento {
     public static String mostraVendas(){
         return vendas.toString();
     }
+    //Fim de Lista de Vendas
     
     //Calculo de salários
      public static void calculaSalario(Funcionario funcionario, int mes){
