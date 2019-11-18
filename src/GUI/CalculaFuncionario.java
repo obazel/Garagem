@@ -6,7 +6,13 @@
 package GUI;
 
 import java.awt.Toolkit;
+import model.Cliente;
+import model.Marca;
+import model.Modelo;
+import model.Veiculo;
+import model.Vendedor;
 import util.Cadastramento;
+import util.Venda;
 
 /**
  *
@@ -132,7 +138,7 @@ public class CalculaFuncionario extends javax.swing.JFrame {
     }
         
     private void botaoCalcularMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoCalcularMouseClicked
-        Cadastramento.calculaSalario(Cadastramento.procuraVendedorNome(caixaFuncionario.getSelectedItem().toString()), Integer.parseInt(caixaMes.getSelectedItem().toString()));
+        Cadastramento.calculaSalario(Cadastramento.procuraVendedorNome(caixaFuncionario.getSelectedItem().toString()), caixaMes.getSelectedIndex()+1);
         
         paneSalario.setText("Funcionário: " + Cadastramento.procuraVendedorNome(caixaFuncionario.getSelectedItem().toString()) + "\nSalário: " + Cadastramento.procuraVendedorNome(caixaFuncionario.getSelectedItem().toString()).getSalario());
     }//GEN-LAST:event_botaoCalcularMouseClicked
