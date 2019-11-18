@@ -7,10 +7,9 @@ package GUI;
 
 import java.awt.Toolkit;
 import util.Cadastramento;
-import java.util.HashSet;
-import javax.swing.JOptionPane;
+
 import model.*;
-import util.*;
+
 
 /**
  *
