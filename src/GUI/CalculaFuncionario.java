@@ -5,6 +5,9 @@
  */
 package GUI;
 
+import java.awt.Toolkit;
+import util.Cadastramento;
+
 /**
  *
  * @author Matheus Henrick
@@ -16,6 +19,19 @@ public class CalculaFuncionario extends javax.swing.JFrame {
      */
     public CalculaFuncionario() {
         initComponents();
+        
+        setTitle("GARAGEM");
+        setLocationRelativeTo(null);
+        setIcon();
+        
+        
+        for(int i = 0; i < Cadastramento.vendedores.size(); i++){
+            caixaFuncionario.addItem(Cadastramento.vendedores.get(i).getNome());
+        }
+        
+        for(int i = 0; i < Cadastramento.gerentes.size(); i++){
+            caixaFuncionario.addItem(Cadastramento.gerentes.get(i).getNome());
+        }
     }
 
     /**
@@ -27,21 +43,99 @@ public class CalculaFuncionario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        caixaFuncionario = new javax.swing.JComboBox<>();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        caixaMes = new javax.swing.JComboBox<>();
+        botaoCalcular = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        paneSalario = new javax.swing.JTextArea();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Century", 0, 36)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("GARAGEM");
+
+        jLabel2.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("CÁLCULO DE SALÁRIO");
+
+        jLabel8.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
+        jLabel8.setText("Funcionário");
+
+        jLabel9.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
+        jLabel9.setText("Mês");
+
+        caixaMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro", " " }));
+
+        botaoCalcular.setText("Calcular");
+        botaoCalcular.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botaoCalcularMouseClicked(evt);
+            }
+        });
+
+        paneSalario.setEditable(false);
+        paneSalario.setColumns(20);
+        paneSalario.setRows(5);
+        jScrollPane1.setViewportView(paneSalario);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 321, Short.MAX_VALUE)
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(botaoCalcular, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(caixaFuncionario, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(caixaMes, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(2, 2, 2)
+                .addComponent(caixaFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addComponent(caixaMes, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(botaoCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+        private void setIcon(){
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("programicon.png")));
+    }
+        
+    private void botaoCalcularMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoCalcularMouseClicked
+        Cadastramento.calculaSalario(Cadastramento.procuraVendedorNome(caixaFuncionario.getSelectedItem().toString()), Integer.parseInt(caixaMes.getSelectedItem().toString()));
+        
+        paneSalario.setText("Funcionário: " + Cadastramento.procuraVendedorNome(caixaFuncionario.getSelectedItem().toString()) + "\nSalário: " + Cadastramento.procuraVendedorNome(caixaFuncionario.getSelectedItem().toString()).getSalario());
+    }//GEN-LAST:event_botaoCalcularMouseClicked
 
     /**
      * @param args the command line arguments
@@ -79,5 +173,14 @@ public class CalculaFuncionario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botaoCalcular;
+    private javax.swing.JComboBox<String> caixaFuncionario;
+    private javax.swing.JComboBox<String> caixaMes;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea paneSalario;
     // End of variables declaration//GEN-END:variables
 }

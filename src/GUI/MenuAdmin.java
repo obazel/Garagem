@@ -50,6 +50,7 @@ public class MenuAdmin extends javax.swing.JFrame {
         botaoCadastrarCarro = new javax.swing.JButton();
         botaoCadastrarFuncionario = new javax.swing.JButton();
         botaoRelatorios = new javax.swing.JButton();
+        botaoCalculaSalario = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -105,6 +106,13 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
 
+        botaoCalculaSalario.setText("Calcula Salários");
+        botaoCalculaSalario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botaoCalculaSalarioMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -127,7 +135,10 @@ public class MenuAdmin extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(botaoRelatorios, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(botaoComprar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(botaoComprar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(botaoCalculaSalario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -148,6 +159,8 @@ public class MenuAdmin extends javax.swing.JFrame {
                 .addComponent(botaoComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botaoRelatorios, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(botaoCalculaSalario, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -159,7 +172,9 @@ public class MenuAdmin extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         pack();
@@ -201,6 +216,11 @@ public class MenuAdmin extends javax.swing.JFrame {
         r.setVisible(true);
     }//GEN-LAST:event_botaoRelatoriosMouseClicked
 
+    private void botaoCalculaSalarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoCalculaSalarioMouseClicked
+        CalculaFuncionario f = new CalculaFuncionario();
+        f.setVisible(true);
+    }//GEN-LAST:event_botaoCalculaSalarioMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -241,6 +261,7 @@ public class MenuAdmin extends javax.swing.JFrame {
     private javax.swing.JButton botaoCadastrarCarro;
     private javax.swing.JButton botaoCadastrarCliente;
     private javax.swing.JButton botaoCadastrarFuncionario;
+    private javax.swing.JButton botaoCalculaSalario;
     private javax.swing.JButton botaoComprar;
     private javax.swing.JButton botaoRelatorios;
     private javax.swing.JButton botaoVender;

@@ -112,6 +112,11 @@ public class PaginaInicial extends javax.swing.JFrame {
         jLabel5.setText("Senha");
 
         botaoEntrar.setText("Entrar");
+        botaoEntrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botaoEntrarMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -153,6 +158,10 @@ public class PaginaInicial extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botaoEntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoEntrarMouseClicked
+        
+    }//GEN-LAST:event_botaoEntrarMouseClicked
 
     /**
      * @param args the command line arguments
