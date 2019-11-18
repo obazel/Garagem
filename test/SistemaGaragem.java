@@ -61,7 +61,7 @@ public class SistemaGaragem {
         Cadastramento.adicionaVendedor(vendedor);
         
         //Onde a coisa acontece
-        Menu m = new Menu();
+        MenuAdmin m = new MenuAdmin();
         m.setVisible(true);
         
 

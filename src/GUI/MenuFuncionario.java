@@ -17,62 +17,18 @@ import util.Cadastramento;
  *
  * @author Matheus Henrick
  */
-public class Menu extends javax.swing.JFrame {
+public class MenuFuncionario extends javax.swing.JFrame {
 
     /**
      * Creates new form Menu
      */
-    public Menu() {
+    public MenuFuncionario() {
         initComponents();
         setTitle("GARAGEM");
         setLocationRelativeTo(null);
         setIcon();
         
-        //Criando objetos para teste
-        Cliente c = new Cliente();
-        
-        c.setNome("Matheus Henrick");
-        c.setSexo("Masculino");
-        c.setDataNascimento("08/02/1999");
-        c.setCpf("043.545.571-00");
-        c.setId(1);
-        c.setTelefone("(62) 9 9299-9449 ");
-        c.setEnd("Avenida Maria Pestana, QD 77 LT 7 - Jardim Balneário M. Ponte");
-        
-        Marca marca = new Marca();
-        
-        marca.setNome("Volkswagem");
-        
-        Modelo modelo = new Modelo();
-        
-        modelo.setMarca(marca);
-        modelo.setNomeModelo("Gol");
-        modelo.setAno(2008);
-        
-        Veiculo v = new Veiculo();
-        
-        v.setPlaca("NLA-1194");
-        v.setCor("Vermelho");
-        v.setValor(12500);
-        v.setModelo(modelo);
-        
-        Vendedor vendedor = new Vendedor();
-        
-        vendedor.setMatricula(1);
-        vendedor.setCpf("001.532.173-27");
-        vendedor.setDataNascimento("10/11/1981");
-        vendedor.setNome("Lorena Larissa");
-        vendedor.setSexo("Feminino");
-        vendedor.setEnd("Rua B, Quadra 16 - Monções, Goiânia, GO.");
-        vendedor.setTelefone("(62) 9 9188-2936");
-        
-        //Adicionando objetos ás listas
-        Cadastramento.adicionaCliente(c);
-        Cadastramento.adicionaVeiculo(v);
-        Cadastramento.adicionaVeiculoDisponivel(v);
-        Cadastramento.adicionaMarca(marca);
-        Cadastramento.adicionaModelo(modelo);
-        Cadastramento.adicionaVendedor(vendedor);
+       
         
     }
 
@@ -85,6 +41,7 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jCheckBox1 = new javax.swing.JCheckBox();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -92,8 +49,8 @@ public class Menu extends javax.swing.JFrame {
         botaoComprar = new javax.swing.JButton();
         botaoCadastrarCliente = new javax.swing.JButton();
         botaoCadastrarCarro = new javax.swing.JButton();
-        botaoCadastrarFuncionario = new javax.swing.JButton();
-        botaoRelatorios = new javax.swing.JButton();
+
+        jCheckBox1.setText("jCheckBox1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -135,20 +92,6 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        botaoCadastrarFuncionario.setText("Cadastrar Funcionário");
-        botaoCadastrarFuncionario.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botaoCadastrarFuncionarioMouseClicked(evt);
-            }
-        });
-
-        botaoRelatorios.setText("Relatórios");
-        botaoRelatorios.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botaoRelatoriosMouseClicked(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -163,15 +106,13 @@ public class Menu extends javax.swing.JFrame {
                             .addComponent(botaoCadastrarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(botaoVender, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(botaoCadastrarCarro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(botaoCadastrarFuncionario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(botaoCadastrarCarro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(botaoRelatorios, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(botaoComprar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(botaoVender, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(botaoComprar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -185,13 +126,9 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(13, 13, 13)
                 .addComponent(botaoCadastrarCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(botaoCadastrarFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botaoVender, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botaoComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(botaoRelatorios, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -235,16 +172,6 @@ public class Menu extends javax.swing.JFrame {
         c.setVisible(true);
     }//GEN-LAST:event_botaoComprarMouseClicked
 
-    private void botaoCadastrarFuncionarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoCadastrarFuncionarioMouseClicked
-        CadastroFuncionario c = new CadastroFuncionario();
-        c.setVisible(true);
-    }//GEN-LAST:event_botaoCadastrarFuncionarioMouseClicked
-
-    private void botaoRelatoriosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoRelatoriosMouseClicked
-        Relatorio r = new Relatorio();
-        r.setVisible(true);
-    }//GEN-LAST:event_botaoRelatoriosMouseClicked
-
     /**
      * @param args the command line arguments
      */
@@ -262,20 +189,21 @@ public class Menu extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menu().setVisible(true);
+                new MenuFuncionario().setVisible(true);
             }
         });
     }
@@ -283,10 +211,9 @@ public class Menu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoCadastrarCarro;
     private javax.swing.JButton botaoCadastrarCliente;
-    private javax.swing.JButton botaoCadastrarFuncionario;
     private javax.swing.JButton botaoComprar;
-    private javax.swing.JButton botaoRelatorios;
     private javax.swing.JButton botaoVender;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
