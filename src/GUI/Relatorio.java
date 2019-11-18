@@ -128,23 +128,23 @@ public class Relatorio extends javax.swing.JFrame {
             
             paneMostraRelatorio.setText(Cadastramento.mostraCompraGaragem());
         }
-        if(s.equalsIgnoreCase("relatório de vendas")){
+        if(s.equalsIgnoreCase("Relatório de Vendas")){
             
             paneMostraRelatorio.setText(Cadastramento.mostraVendas());
         }
-        if(s.equalsIgnoreCase("relatório de vendedores")){
+        if(s.equalsIgnoreCase("Lista de Vendedores")){
             
             paneMostraRelatorio.setText(Cadastramento.mostraVendedores());
         }
-        if(s.equalsIgnoreCase("relatório de gerentes")){
+        if(s.equalsIgnoreCase("Lista de Gerentes")){
             
             paneMostraRelatorio.setText(Cadastramento.mostraGerentes());
         }
-        if(s.equalsIgnoreCase("relatório de veículos disponíveis")){
+        if(s.equalsIgnoreCase("Lista de Veículos Disponíveis")){
            
             paneMostraRelatorio.setText(Cadastramento.mostraVeiculosDisponiveis());
         }
-        if(s.equalsIgnoreCase("relatório de clientes")){
+        if(s.equalsIgnoreCase("Lista de Clientes")){
            
             paneMostraRelatorio.setText(Cadastramento.mostraClientes());
         }
