@@ -6,6 +6,12 @@
 package GUI;
 
 import java.awt.Toolkit;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.swing.JOptionPane;
 import util.Cadastramento;
 
 /**
@@ -147,6 +153,7 @@ public class Relatorio extends javax.swing.JFrame {
         if(s.equalsIgnoreCase("Lista de Clientes")){
            
             paneMostraRelatorio.setText(Cadastramento.mostraClientes());
+
         }
         if(s.equalsIgnoreCase("Lista de Veículos Vendidos")){
            

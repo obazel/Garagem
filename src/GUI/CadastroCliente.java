@@ -6,14 +6,24 @@
 package GUI;
 
 import java.awt.Toolkit;
+import java.io.BufferedReader;
+import java.io.FileOutputStream;
+import java.io.FileReader;
 import model.Cliente;
 import util.Cadastramento;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Matheus Henrick
  */
-public class CadastroCliente extends javax.swing.JFrame {
+public class CadastroCliente extends javax.swing.JFrame{
 
     /**
      * Creates new form CadastroCliente
@@ -211,13 +221,43 @@ public class CadastroCliente extends javax.swing.JFrame {
     
     private void clicarBotaoCadastrar(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clicarBotaoCadastrar
 
+        
         if(selecionaMasc.isSelected()){
             Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(inserirID.getText()), inserirNome.getText(), inserirDataNasc.getText(), inserirCPF.getText(), "Masculino", inserirEndereco.getText(), inserirTelefone.getText()));
+            
+           
+            
+            
+            try {
+                FileWriter arquivo = new FileWriter("BancoClientes.txt", true);
+                PrintWriter gravar = new PrintWriter(arquivo);
+                
+                gravar.printf("%n"+inserirID.getText() + ";" +  inserirNome.getText() + ";" +  inserirDataNasc.getText() + ";" +  inserirCPF.getText() + ";" +  "Feminino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText());
+                
+                arquivo.close();
+
+            } catch (IOException ex) {
+                JOptionPane.showMessageDialog(null, "ERRO");
+            }
+            
         }
+        dispose();
         if(selecionaFem.isSelected()){
             Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(inserirID.getText()), inserirNome.getText(), inserirDataNasc.getText(), inserirCPF.getText(), "Feminino", inserirEndereco.getText(), inserirTelefone.getText()));
-        }
-        
+            
+            try {
+                FileWriter arquivo = new FileWriter("BancoClientes.txt", true);
+                PrintWriter gravar = new PrintWriter(arquivo);
+                
+                gravar.printf("%n"+inserirID.getText() + ";" +  inserirNome.getText() + ";" +  inserirDataNasc.getText() + ";" +  inserirCPF.getText() + ";" +  "Feminino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText());
+                
+                arquivo.close();
+
+            } catch (IOException ex) {
+                JOptionPane.showMessageDialog(null, "ERRO");
+            }
+        } 
+             
         dispose();
     }//GEN-LAST:event_clicarBotaoCadastrar
 
