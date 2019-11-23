@@ -6,15 +6,11 @@
 package GUI;
 
 import java.awt.Toolkit;
-import java.io.FileWriter;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.swing.JOptionPane;
 import model.Cliente;
-import model.Marca;
-import model.Modelo;
-import model.Veiculo;
-import model.Vendedor;
 import util.Cadastramento;
 
 /**
@@ -32,51 +28,30 @@ public class MenuAdmin extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setIcon();
         
-         //Criando objetos para teste
-        Cliente c = new Cliente();
-        
-        c.setNome("Matheus Henrick");
-        c.setSexo("Masculino");
-        c.setDataNascimento("08/02/1999");
-        c.setCpf("043.545.571-00");
-        c.setId(1);
-        c.setTelefone("(62) 9 9299-9449 ");
-        c.setEnd("Avenida Maria Pestana, QD 77 LT 7 - Jardim Balneário M. Ponte");
-        
-        Marca marca = new Marca();
-        
-        marca.setNome("Volkswagem");
-        
-        Modelo modelo = new Modelo();
-        
-        modelo.setMarca(marca);
-        modelo.setNomeModelo("Gol");
-        modelo.setAno(2008);
-        
-        Veiculo v = new Veiculo();
-        
-        v.setPlaca("NLA-1194");
-        v.setCor("Vermelho");
-        v.setValor(12500);
-        v.setModelo(modelo);
-        
-        Vendedor vendedor = new Vendedor();
-        
-        vendedor.setMatricula(1);
-        vendedor.setCpf("001.532.173-27");
-        vendedor.setDataNascimento("10/11/1981");
-        vendedor.setNome("Lorena Larissa");
-        vendedor.setSexo("Feminino");
-        vendedor.setEnd("Rua B, Quadra 16 - Monções, Goiânia, GO.");
-        vendedor.setTelefone("(62) 9 9188-2936");
-        
-        //Adicionando objetos ás listas
-        Cadastramento.adicionaCliente(c);
-        Cadastramento.adicionaVeiculo(v);
-        Cadastramento.adicionaVeiculoDisponivel(v);
-        Cadastramento.adicionaMarca(marca);
-        Cadastramento.adicionaModelo(modelo);
-        Cadastramento.adicionaVendedor(vendedor);
+        //Carregando Banco de Dados dos Clientes para o programa
+        try {
+                FileReader arquivo = new FileReader("C:\\Users\\Matheus Henrick\\Desktop\\GITREP\\GARAGEM 2019-2\\Garagem\\BancoClientes.txt");
+                BufferedReader lerArq = new BufferedReader(arquivo);
+                
+                String linha = lerArq.readLine(); 
+                String linhaSeparada[] = linha.split(";");
+                Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], linhaSeparada[6]));
+                
+                 while (linha != null) {
+                    linha = lerArq.readLine(); 
+                    
+                    if(linha != null){
+                        
+                        linhaSeparada = linha.split(";");
+                        Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], linhaSeparada[6]));
+                        
+                    }
+                  }
+                arquivo.close();
+
+            } catch (IOException ex) {
+                JOptionPane.showMessageDialog(null, "ERRO");
+            }
         
     }
 

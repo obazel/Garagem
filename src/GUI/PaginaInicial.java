@@ -6,6 +6,12 @@
 package GUI;
 
 import java.awt.Toolkit;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.swing.JOptionPane;
 import model.Cliente;
 import model.Marca;
 import model.Modelo;
@@ -160,6 +166,7 @@ public class PaginaInicial extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoEntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoEntrarMouseClicked
+        //Carregando arquivo texto
         
     }//GEN-LAST:event_botaoEntrarMouseClicked
 

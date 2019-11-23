@@ -6,17 +6,11 @@
 package GUI;
 
 import java.awt.Toolkit;
-import java.io.BufferedReader;
-import java.io.FileOutputStream;
-import java.io.FileReader;
 import model.Cliente;
 import util.Cadastramento;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -225,11 +219,8 @@ public class CadastroCliente extends javax.swing.JFrame{
         if(selecionaMasc.isSelected()){
             Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(inserirID.getText()), inserirNome.getText(), inserirDataNasc.getText(), inserirCPF.getText(), "Masculino", inserirEndereco.getText(), inserirTelefone.getText()));
             
-           
-            
-            
             try {
-                FileWriter arquivo = new FileWriter("BancoClientes.txt", true);
+                FileWriter arquivo = new FileWriter("C:\\Users\\Matheus Henrick\\Desktop\\GITREP\\GARAGEM 2019-2\\Garagem\\BancoClientes.txt", true);
                 PrintWriter gravar = new PrintWriter(arquivo);
                 
                 gravar.printf("%n"+inserirID.getText() + ";" +  inserirNome.getText() + ";" +  inserirDataNasc.getText() + ";" +  inserirCPF.getText() + ";" +  "Feminino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText());
@@ -246,7 +237,7 @@ public class CadastroCliente extends javax.swing.JFrame{
             Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(inserirID.getText()), inserirNome.getText(), inserirDataNasc.getText(), inserirCPF.getText(), "Feminino", inserirEndereco.getText(), inserirTelefone.getText()));
             
             try {
-                FileWriter arquivo = new FileWriter("BancoClientes.txt", true);
+                FileWriter arquivo = new FileWriter("C:\\Users\\Matheus Henrick\\Desktop\\GITREP\\GARAGEM 2019-2\\Garagem\\BancoClientes.txt", true);
                 PrintWriter gravar = new PrintWriter(arquivo);
                 
                 gravar.printf("%n"+inserirID.getText() + ";" +  inserirNome.getText() + ";" +  inserirDataNasc.getText() + ";" +  inserirCPF.getText() + ";" +  "Feminino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText());
