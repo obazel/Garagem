@@ -30,28 +30,29 @@ public class MenuAdmin extends javax.swing.JFrame {
         
         //Carregando Banco de Dados dos Clientes para o programa
         try {
-                FileReader arquivo = new FileReader("C:\\Users\\Matheus Henrick\\Desktop\\GITREP\\GARAGEM 2019-2\\Garagem\\BancoClientes.txt");
-                BufferedReader lerArq = new BufferedReader(arquivo);
-                
-                String linha = lerArq.readLine(); 
-                String linhaSeparada[] = linha.split(";");
-                Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], linhaSeparada[6]));
-                
-                 while (linha != null) {
-                    linha = lerArq.readLine(); 
-                    
-                    if(linha != null){
-                        
-                        linhaSeparada = linha.split(";");
-                        Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], linhaSeparada[6]));
-                        
-                    }
-                  }
-                arquivo.close();
+            
+            FileReader arquivo = new FileReader("BancoClientes.txt");
+            BufferedReader lerArq = new BufferedReader(arquivo);
 
-            } catch (IOException ex) {
-                JOptionPane.showMessageDialog(null, "ERRO");
-            }
+            String linha = lerArq.readLine(); 
+            String linhaSeparada[] = linha.split(";");
+            Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], linhaSeparada[6]));
+
+             while (linha != null) {
+                linha = lerArq.readLine(); 
+
+                if(linha != null){
+
+                    linhaSeparada = linha.split(";");
+                    Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], linhaSeparada[6]));
+
+                }
+              }
+            arquivo.close();
+
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "ERRO");
+        }
         
     }
 
