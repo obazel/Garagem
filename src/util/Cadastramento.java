@@ -88,6 +88,10 @@ public class Cadastramento {
         return gerentes.toString();
     }
     
+    public static void removeGerente(Gerente g){
+        gerentes.remove(g);
+    }
+    
     public static boolean existeGerente(int matricula){
         boolean opc = false;
         for(Gerente gerente : gerentes){
@@ -115,7 +119,7 @@ public class Cadastramento {
         Gerente g = new Gerente();
         
         for(Gerente gerente : gerentes){
-            if(gerente.getNome() == nome){
+            if(gerente.getNome().equalsIgnoreCase(nome)){
                 g = gerente;
             }
         }
@@ -132,6 +136,10 @@ public class Cadastramento {
 
     public static String mostraVendedores(){
         return vendedores.toString();
+    }
+    
+    public static void removeVendedor(Vendedor v){
+        vendedores.remove(v);
     }
     
     public static boolean existeVendedor(int matricula){
@@ -161,7 +169,7 @@ public class Cadastramento {
         Vendedor v = new Vendedor();
         
         for(Vendedor vendedor : vendedores){
-            if(vendedor.getNome() == nome){
+            if(vendedor.getNome().equalsIgnoreCase(nome)){
                 v = vendedor;
             }
         }
@@ -276,7 +284,7 @@ public class Cadastramento {
     //Fim de Lista de Vendas
     
     //Calculo de salários
-     public static void calculaSalario(Funcionario funcionario, int mes){
+     public static void calculaSalario(Funcionario funcionario, int mes, int ano){
 
         double valorVendasAcumulado = 0;
         double valorTotal = 0;
@@ -288,8 +296,10 @@ public class Cadastramento {
             for (Venda v : vendas) {
 
                 if (mes == v.getMes()) {
-                    if (funcionario.equals(v.getVendedor())) {
-                        valorVendasAcumulado += v.getVeiculo().getValor();
+                    if(ano == v.getAno()){
+                        if (funcionario.equals(v.getVendedor())) {
+                            valorVendasAcumulado += v.getVeiculo().getValor();
+                        }
                     }
                 }
             }
@@ -308,7 +318,9 @@ public class Cadastramento {
 
             for(Venda v : vendas){
                 if(mes == v.getMes()){
-                    valorTotal += v.getVeiculo().getValor();
+                    if(ano == v.getAno()){
+                        valorTotal += v.getVeiculo().getValor();
+                    } 
                 }
             }
 

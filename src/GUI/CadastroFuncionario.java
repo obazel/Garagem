@@ -6,6 +6,10 @@
 package GUI;
 
 import java.awt.Toolkit;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.swing.JOptionPane;
 import model.Gerente;
 import model.Vendedor;
 import util.Cadastramento;
@@ -210,9 +214,36 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         if(selecionaMasc.isSelected()){
             if(caixaCargo.getSelectedItem().toString().equalsIgnoreCase("Gerente")){
                 Cadastramento.adicionaGerente(new Gerente(Integer.parseInt(inserirMatricula.getText()), inserirNome.getText(), inserirDataNasc.getText(), inserirCPF.getText(), "Masculino", inserirEndereco.getText(), inserirTelefone.getText()));
+                
+                //Gravando gerente no banco de dados
+            try {
+                FileWriter arquivo = new FileWriter("BancoGerentes.txt", true);
+                PrintWriter gravar = new PrintWriter(arquivo);
+                
+                gravar.printf(inserirMatricula.getText() + ";" +  inserirNome.getText() + ";" +  inserirDataNasc.getText() + ";" +  inserirCPF.getText() + ";" +  "Masculino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText() + "%n");
+                
+                arquivo.close();
+
+            } catch (IOException ex) {
+                JOptionPane.showMessageDialog(null, "ERRO");
+            }
+                
             }
             if(caixaCargo.getSelectedItem().toString().equalsIgnoreCase("Vendedor")){
                 Cadastramento.adicionaVendedor(new Vendedor(Integer.parseInt(inserirMatricula.getText()), inserirNome.getText(), inserirDataNasc.getText(), inserirCPF.getText(), "Masculino", inserirEndereco.getText(), inserirTelefone.getText()));
+                
+                //Gravando vendedor no banco de dados
+                try {
+                FileWriter arquivo = new FileWriter("BancoVendedores.txt", true);
+                PrintWriter gravar = new PrintWriter(arquivo);
+                
+                gravar.printf(inserirMatricula.getText() + ";" +  inserirNome.getText() + ";" +  inserirDataNasc.getText() + ";" +  inserirCPF.getText() + ";" +  "Masculino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText() + "%n");
+                
+                arquivo.close();
+
+            } catch (IOException ex) {
+                JOptionPane.showMessageDialog(null, "ERRO");
+            }
             }
             
         }
@@ -220,9 +251,37 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             
             if(caixaCargo.getSelectedItem().toString().equalsIgnoreCase("Gerente")){
                 Cadastramento.adicionaGerente(new Gerente(Integer.parseInt(inserirMatricula.getText()), inserirNome.getText(), inserirDataNasc.getText(), inserirCPF.getText(), "Feminino", inserirEndereco.getText(), inserirTelefone.getText()));
+                
+                //Gravando gerente no banco de dados
+                try {
+                FileWriter arquivo = new FileWriter("BancoGerentes.txt", true);
+                PrintWriter gravar = new PrintWriter(arquivo);
+                
+                gravar.printf(inserirMatricula.getText() + ";" +  inserirNome.getText() + ";" +  inserirDataNasc.getText() + ";" +  inserirCPF.getText() + ";" +  "Feminino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText() + "%n");
+                
+                arquivo.close();
+
+            } catch (IOException ex) {
+                JOptionPane.showMessageDialog(null, "ERRO");
+            }
+                
             }
             if(caixaCargo.getSelectedItem().toString().equalsIgnoreCase("Vendedor")){
                 Cadastramento.adicionaVendedor(new Vendedor(Integer.parseInt(inserirMatricula.getText()), inserirNome.getText(), inserirDataNasc.getText(), inserirCPF.getText(), "Feminino", inserirEndereco.getText(), inserirTelefone.getText()));
+            
+                //Gravando vendedor no banco de dados
+                try {
+                FileWriter arquivo = new FileWriter("BancoVendedores.txt", true);
+                PrintWriter gravar = new PrintWriter(arquivo);
+                
+                gravar.printf(inserirMatricula.getText() + ";" +  inserirNome.getText() + ";" +  inserirDataNasc.getText() + ";" +  inserirCPF.getText() + ";" +  "Feminino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText() + "%n");
+                
+                arquivo.close();
+
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(null, "ERRO");
+                }
+                
             }
            
         }

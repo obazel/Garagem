@@ -6,14 +6,17 @@
 package GUI;
 
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import javax.swing.JOptionPane;
 import model.Cliente;
+import model.Gerente;
 import model.Marca;
 import model.Modelo;
 import model.Veiculo;
+import model.Vendedor;
 import util.Cadastramento;
 
 /**
@@ -83,6 +86,58 @@ public class PaginaInicial extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Erro de carregamento de dados.");
         }
         
+        //Carregando Banco de Dados dos Gerentes para o programa
+        try {
+            
+            FileReader arquivo = new FileReader("BancoGerentes.txt");
+            BufferedReader lerArq = new BufferedReader(arquivo);
+
+            String linha = lerArq.readLine(); 
+            String linhaSeparada[] = linha.split(";");
+            Cadastramento.adicionaGerente(new Gerente(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], linhaSeparada[6]));
+
+             while (linha != null) {
+                linha = lerArq.readLine(); 
+
+                if(linha != null){
+
+                    linhaSeparada = linha.split(";");
+                    Cadastramento.adicionaGerente(new Gerente(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], linhaSeparada[6]));
+
+                }
+              }
+            arquivo.close();
+
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Erro de carregamento de dados.");
+        }
+        
+        //Carregando Banco de Dados dos Vendedores para o programa
+        try {
+            
+            FileReader arquivo = new FileReader("BancoVendedores.txt");
+            BufferedReader lerArq = new BufferedReader(arquivo);
+
+            String linha = lerArq.readLine(); 
+            String linhaSeparada[] = linha.split(";");
+            Cadastramento.adicionaVendedor(new Vendedor(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], linhaSeparada[6]));
+
+             while (linha != null) {
+                linha = lerArq.readLine(); 
+
+                if(linha != null){
+
+                    linhaSeparada = linha.split(";");
+                    Cadastramento.adicionaVendedor(new Vendedor(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], linhaSeparada[6]));
+
+                }
+              }
+            arquivo.close();
+
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Erro de carregamento de dados.");
+        }
+        
         caixaLogin.addItem("Admin");
         caixaLogin.addItem("Funcionário");
     }
@@ -114,6 +169,12 @@ public class PaginaInicial extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("LOGIN");
+
+        inserirSenha.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                inserirSenhaKeyPressed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
         jLabel4.setText("Login");
@@ -198,6 +259,35 @@ public class PaginaInicial extends javax.swing.JFrame {
         
 
     }//GEN-LAST:event_botaoEntrarActionPerformed
+
+    private void inserirSenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_inserirSenhaKeyPressed
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            String senha = new String(inserirSenha.getPassword());
+
+            if(caixaLogin.getSelectedItem().toString().equalsIgnoreCase("admin")){
+                if(senha.equalsIgnoreCase("admin")){
+                    JOptionPane.showMessageDialog(null, "Login realizado com sucesso.");
+                    MenuAdmin m = new MenuAdmin();
+                    m.setVisible(true);
+                    dispose();
+                }else{
+                    JOptionPane.showMessageDialog(null, "Revise a senha ou login.");
+                }
+            }
+
+
+            if(caixaLogin.getSelectedItem().toString().equalsIgnoreCase("funcionário")){
+                if(senha.equalsIgnoreCase("123")){
+                    JOptionPane.showMessageDialog(null, "Login realizado com sucesso.");
+                    MenuFuncionario n = new MenuFuncionario();
+                    n.setVisible(true);
+                    dispose();
+                }else{
+                    JOptionPane.showMessageDialog(null, "Revise a senha ou login.");
+                }
+            }
+        }
+    }//GEN-LAST:event_inserirSenhaKeyPressed
 
     /**
      * @param args the command line arguments

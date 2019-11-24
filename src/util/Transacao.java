@@ -12,6 +12,15 @@ public abstract class Transacao {
     private Veiculo veiculo;
     private Funcionario vendedor;
     private int mes;
+    private int ano;
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
 
     public int getMes() {
         return mes;

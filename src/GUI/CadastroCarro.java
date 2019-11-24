@@ -6,6 +6,10 @@
 package GUI;
 
 import java.awt.Toolkit;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.swing.JOptionPane;
 import util.Cadastramento;
 
 import model.*;
@@ -212,6 +216,18 @@ public class CadastroCarro extends javax.swing.JFrame {
         inserirPlaca.setText("");
         inserirValor.setText("");
  
+        try {
+                FileWriter arquivo = new FileWriter("BancoVeiculos.txt", true);
+                PrintWriter gravar = new PrintWriter(arquivo);
+                
+                gravar.printf("%n" + inserirCor.getText() + ";" +  inserirValor.getText() + ";" +  inserirPlaca.getText() + ";" +  inserirAno.getText() + ";" +  inserirModelo.getText() + ";" + inserirMarca.getText());
+                
+                arquivo.close();
+
+            } catch (IOException ex) {
+                JOptionPane.showMessageDialog(null, "ERRO");
+            }
+        
         this.dispose();
 
     }//GEN-LAST:event_clicarBotaoCadastrar

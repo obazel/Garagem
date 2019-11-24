@@ -219,8 +219,9 @@ public class CadastroCliente extends javax.swing.JFrame{
         if(selecionaMasc.isSelected()){
             Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(inserirID.getText()), inserirNome.getText(), inserirDataNasc.getText(), inserirCPF.getText(), "Masculino", inserirEndereco.getText(), inserirTelefone.getText()));
             
+            //Gravando cliente no banco de dados
             try {
-                FileWriter arquivo = new FileWriter("C:\\Users\\Matheus Henrick\\Desktop\\GITREP\\GARAGEM 2019-2\\Garagem\\BancoClientes.txt", true);
+                FileWriter arquivo = new FileWriter("BancoClientes.txt", true);
                 PrintWriter gravar = new PrintWriter(arquivo);
                 
                 gravar.printf("%n"+inserirID.getText() + ";" +  inserirNome.getText() + ";" +  inserirDataNasc.getText() + ";" +  inserirCPF.getText() + ";" +  "Feminino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText());
@@ -237,7 +238,7 @@ public class CadastroCliente extends javax.swing.JFrame{
             Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(inserirID.getText()), inserirNome.getText(), inserirDataNasc.getText(), inserirCPF.getText(), "Feminino", inserirEndereco.getText(), inserirTelefone.getText()));
             
             try {
-                FileWriter arquivo = new FileWriter("C:\\Users\\Matheus Henrick\\Desktop\\GITREP\\GARAGEM 2019-2\\Garagem\\BancoClientes.txt", true);
+                FileWriter arquivo = new FileWriter("BancoClientes.txt", true);
                 PrintWriter gravar = new PrintWriter(arquivo);
                 
                 gravar.printf("%n"+inserirID.getText() + ";" +  inserirNome.getText() + ";" +  inserirDataNasc.getText() + ";" +  inserirCPF.getText() + ";" +  "Feminino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText());

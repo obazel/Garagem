@@ -40,8 +40,8 @@ public class Modelo {
     
     public String toString(){
         return "\n» MODELO «" +
+                "\n  »» " + getNomeModelo() +
                 "\n  »»Ano: " + getAno() +
-                "\n  »»Nome: " + getNomeModelo() +
                 getMarca().toString();
                 
     }
