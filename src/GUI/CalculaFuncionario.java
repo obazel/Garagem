@@ -6,13 +6,8 @@
 package GUI;
 
 import java.awt.Toolkit;
-import model.Cliente;
-import model.Marca;
-import model.Modelo;
-import model.Veiculo;
-import model.Vendedor;
 import util.Cadastramento;
-import util.Venda;
+
 
 /**
  *
@@ -28,6 +23,7 @@ public class CalculaFuncionario extends javax.swing.JFrame {
         
         setTitle("GARAGEM");
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setIcon();
         
         
@@ -60,6 +56,7 @@ public class CalculaFuncionario extends javax.swing.JFrame {
         paneSalario = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Century", 0, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

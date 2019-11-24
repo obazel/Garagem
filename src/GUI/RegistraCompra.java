@@ -9,7 +9,6 @@ import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 import util.Cadastramento;
 import util.CompraGaragem;
-import util.Venda;
 
 /**
  *

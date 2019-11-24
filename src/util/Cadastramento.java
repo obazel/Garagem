@@ -208,8 +208,9 @@ public class Cadastramento {
     public static List<Veiculo> veiculosDisponiveis = new ArrayList<Veiculo>();
     public static List<Veiculo> veiculosVendidos = new ArrayList<Veiculo>();
     
-    public static void adicionaVeiculo(Veiculo v){
+    public static Veiculo adicionaVeiculo(Veiculo v){
         veiculos.add(v);
+        return v;
     }
     
     public static void adicionaVeiculoDisponivel(Veiculo v){

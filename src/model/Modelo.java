@@ -32,7 +32,7 @@ public class Modelo {
     
     public Modelo(){}
 
-    public Modelo(int ano, Marca marca, String nomeModelo){
+    public Modelo(int ano, String nomeModelo, Marca marca){
         setAno(ano);
         setMarca(marca);
         setNomeModelo(nomeModelo);

@@ -6,12 +6,6 @@
 package GUI;
 
 import java.awt.Toolkit;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import javax.swing.JOptionPane;
 import util.Cadastramento;
 
 /**
@@ -58,6 +52,7 @@ public class Relatorio extends javax.swing.JFrame {
         botaoGeraRelatório = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Century", 0, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

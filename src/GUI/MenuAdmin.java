@@ -6,12 +6,6 @@
 package GUI;
 
 import java.awt.Toolkit;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import javax.swing.JOptionPane;
-import model.Cliente;
-import util.Cadastramento;
 
 /**
  *
@@ -27,32 +21,6 @@ public class MenuAdmin extends javax.swing.JFrame {
         setTitle("GARAGEM");
         setLocationRelativeTo(null);
         setIcon();
-        
-        //Carregando Banco de Dados dos Clientes para o programa
-        try {
-            
-            FileReader arquivo = new FileReader("BancoClientes.txt");
-            BufferedReader lerArq = new BufferedReader(arquivo);
-
-            String linha = lerArq.readLine(); 
-            String linhaSeparada[] = linha.split(";");
-            Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], linhaSeparada[6]));
-
-             while (linha != null) {
-                linha = lerArq.readLine(); 
-
-                if(linha != null){
-
-                    linhaSeparada = linha.split(";");
-                    Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], linhaSeparada[6]));
-
-                }
-              }
-            arquivo.close();
-
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "ERRO");
-        }
         
     }
 

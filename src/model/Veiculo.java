@@ -41,7 +41,7 @@ public class Veiculo {
 
     public Veiculo(){}
 
-    public Veiculo(String cor, Modelo modelo, double valor, String placa){
+    public Veiculo(String cor, double valor, String placa, Modelo modelo){
         setCor(cor);
         setModelo(modelo);
         setPlaca(placa);
