@@ -1,1 +1,1 @@
-20190123;Carlos Augusto;12/11/1988;219721730-57;Masculino;Rua Hermogenes, QD 6 Casa 1, Bairro Glória, Goiânia - GO;(62) 9 8533-5666
+20190123;Carlos Augusto;219721730-57;Masculino;Rua Hermogenes, QD 6 Casa 1, Bairro Glória, Goiânia - GO;(62) 9 8533-5666;10;12;19781;1;1;Feminino;1;11011999

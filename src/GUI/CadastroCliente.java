@@ -53,15 +53,20 @@ public class CadastroCliente extends javax.swing.JFrame{
         jLabel6 = new javax.swing.JLabel();
         inserirID = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        botaoCadastrar = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        selecionaDia = new javax.swing.JComboBox<>();
+        jLabel12 = new javax.swing.JLabel();
+        selecionaMes = new javax.swing.JComboBox<>();
+        jLabel13 = new javax.swing.JLabel();
+        selecionaAno = new javax.swing.JComboBox<>();
+        jLabel9 = new javax.swing.JLabel();
+        inserirEndereco = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        inserirTelefone = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         selecionaMasc = new javax.swing.JRadioButton();
         selecionaFem = new javax.swing.JRadioButton();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        inserirEndereco = new javax.swing.JTextField();
-        inserirTelefone = new javax.swing.JTextField();
-        inserirDataNasc = new javax.swing.JTextField();
-        botaoCadastrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -87,29 +92,86 @@ public class CadastroCliente extends javax.swing.JFrame{
         jLabel3.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
         jLabel3.setText("Data de Nascimento");
 
+        botaoCadastrar.setText("Cadastrar");
+        botaoCadastrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                clicarBotaoCadastrar(evt);
+            }
+        });
+
+        jLabel11.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
+        jLabel11.setText("Dia");
+
+        selecionaDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+
+        jLabel12.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
+        jLabel12.setText("Mês");
+
+        selecionaMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro" }));
+
+        jLabel13.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
+        jLabel13.setText("Ano");
+
+        selecionaAno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970", "1969", "1968", "1967", "1966", "1965", "1964", "1963", "1962", "1961", "1960", "1959", "1958", "1957", "1956", "1955", "1954", "1953", "1952", "1951", "1950", "1949", "1948", "1947", "1946", "1945", "1944", "1943", "1942", "1941", "1940", "1939", "1938", "1937", "1936", "1935", "1934", "1933", "1932", "1931", "1930", "1929", "1928", "1927", "1926", "1925", "1924", "1923", "1922", "1921", "1920", "1919" }));
+
+        jLabel9.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
+        jLabel9.setText("Endereço");
+
+        jLabel7.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
+        jLabel7.setText("Telefone");
+
+        jLabel8.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
+        jLabel8.setText("Sexo");
+
+        botoesSexo.add(selecionaMasc);
+        selecionaMasc.setText("Masculino");
+
+        botoesSexo.add(selecionaFem);
+        selecionaFem.setText("Feminino");
+
         javax.swing.GroupLayout painelCadastraClienteLayout = new javax.swing.GroupLayout(painelCadastraCliente);
         painelCadastraCliente.setLayout(painelCadastraClienteLayout);
         painelCadastraClienteLayout.setHorizontalGroup(
             painelCadastraClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelCadastraClienteLayout.createSequentialGroup()
-                .addGroup(painelCadastraClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(painelCadastraClienteLayout.createSequentialGroup()
-                        .addContainerGap()
+                .addContainerGap()
+                .addGroup(painelCadastraClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(painelCadastraClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(inserirNome, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(inserirCPF, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(inserirID, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelCadastraClienteLayout.createSequentialGroup()
+                            .addComponent(jLabel8)
+                            .addGap(18, 18, 18)
+                            .addComponent(selecionaMasc)
+                            .addGap(18, 18, 18)
+                            .addComponent(selecionaFem)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(botaoCadastrar))
+                        .addComponent(inserirTelefone, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(inserirEndereco, javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(painelCadastraClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(inserirNome, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(inserirID)))
-                    .addGroup(painelCadastraClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(painelCadastraClienteLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addGroup(painelCadastraClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel4)
-                                .addComponent(inserirCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(176, 176, 176))
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel7)
+                            .addGroup(painelCadastraClienteLayout.createSequentialGroup()
+                                .addComponent(jLabel11)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(selecionaDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel12)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(selecionaMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel13)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(selecionaAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         painelCadastraClienteLayout.setVerticalGroup(
             painelCadastraClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -131,64 +193,14 @@ public class CadastroCliente extends javax.swing.JFrame{
                 .addComponent(inserirID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        jLabel8.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
-        jLabel8.setText("Sexo");
-
-        botoesSexo.add(selecionaMasc);
-        selecionaMasc.setText("Masculino");
-
-        botoesSexo.add(selecionaFem);
-        selecionaFem.setText("Feminino");
-
-        jLabel9.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
-        jLabel9.setText("Endereço");
-
-        jLabel7.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
-        jLabel7.setText("Telefone");
-
-        inserirDataNasc.setToolTipText("dia/mês/ano");
-
-        botaoCadastrar.setText("Cadastrar");
-        botaoCadastrar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                clicarBotaoCadastrar(evt);
-            }
-        });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(inserirDataNasc, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9)
-                    .addComponent(inserirTelefone)
-                    .addComponent(inserirEndereco)
-                    .addComponent(jLabel7)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addGap(18, 18, 18)
-                        .addComponent(selecionaMasc)
-                        .addGap(18, 18, 18)
-                        .addComponent(selecionaFem)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(botaoCadastrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(painelCadastraCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(painelCadastraCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(inserirDataNasc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(painelCadastraClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(selecionaDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(selecionaMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(selecionaAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -198,12 +210,25 @@ public class CadastroCliente extends javax.swing.JFrame{
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(inserirTelefone, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(painelCadastraClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(selecionaMasc)
                     .addComponent(selecionaFem)
                     .addComponent(botaoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 9, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(painelCadastraCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(painelCadastraCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -215,16 +240,15 @@ public class CadastroCliente extends javax.swing.JFrame{
     
     private void clicarBotaoCadastrar(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clicarBotaoCadastrar
 
-        
         if(selecionaMasc.isSelected()){
-            Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(inserirID.getText()), inserirNome.getText(), inserirDataNasc.getText(), inserirCPF.getText(), "Masculino", inserirEndereco.getText(), inserirTelefone.getText()));
+            Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(inserirID.getText()), inserirNome.getText(), inserirCPF.getText(), "Masculino", inserirEndereco.getText(), inserirTelefone.getText(), Integer.parseInt(selecionaDia.getSelectedItem().toString()), (selecionaMes.getSelectedIndex() + 1), Integer.parseInt(selecionaAno.getSelectedItem().toString())));
             
             //Gravando cliente no banco de dados
             try {
                 FileWriter arquivo = new FileWriter("BancoClientes.txt", true);
                 PrintWriter gravar = new PrintWriter(arquivo);
                 
-                gravar.printf(inserirID.getText() + ";" +  inserirNome.getText() + ";" +  inserirDataNasc.getText() + ";" +  inserirCPF.getText() + ";" +  "Feminino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText() + "%n");
+                gravar.printf(inserirID.getText() + ";" +  inserirNome.getText() + ";" +  inserirCPF.getText() + ";" +  "Masculino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText() + ";" + selecionaDia.getSelectedItem().toString() + (selecionaMes.getSelectedIndex()+1) + selecionaAno.getSelectedItem().toString() + "%n");
                 
                 arquivo.close();
 
@@ -235,13 +259,13 @@ public class CadastroCliente extends javax.swing.JFrame{
         }
         dispose();
         if(selecionaFem.isSelected()){
-            Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(inserirID.getText()), inserirNome.getText(), inserirDataNasc.getText(), inserirCPF.getText(), "Feminino", inserirEndereco.getText(), inserirTelefone.getText()));
+            Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(inserirID.getText()), inserirNome.getText(), inserirCPF.getText(), "Feminino", inserirEndereco.getText(), inserirTelefone.getText(), Integer.parseInt(selecionaDia.getSelectedItem().toString()), (selecionaMes.getSelectedIndex() + 1), Integer.parseInt(selecionaAno.getSelectedItem().toString())));
             
             try {
                 FileWriter arquivo = new FileWriter("BancoClientes.txt", true);
                 PrintWriter gravar = new PrintWriter(arquivo);
                 
-                gravar.printf(inserirID.getText() + ";" +  inserirNome.getText() + ";" +  inserirDataNasc.getText() + ";" +  inserirCPF.getText() + ";" +  "Feminino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText() + "%n");
+                gravar.printf(inserirID.getText() + ";" +  inserirNome.getText() + ";" +  inserirCPF.getText() + ";" +  "Feminino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText() + ";" + selecionaDia.getSelectedItem().toString() + (selecionaMes.getSelectedIndex()+1) + selecionaAno.getSelectedItem().toString() + "%n");
                 
                 arquivo.close();
 
@@ -292,13 +316,15 @@ public class CadastroCliente extends javax.swing.JFrame{
     private javax.swing.JButton botaoCadastrar;
     private javax.swing.ButtonGroup botoesSexo;
     private javax.swing.JTextField inserirCPF;
-    private javax.swing.JTextField inserirDataNasc;
     private javax.swing.JTextField inserirEndereco;
     private javax.swing.JTextField inserirID;
     private javax.swing.JTextField inserirNome;
     private javax.swing.JTextField inserirTelefone;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -308,7 +334,10 @@ public class CadastroCliente extends javax.swing.JFrame{
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JPanel painelCadastraCliente;
+    private javax.swing.JComboBox<String> selecionaAno;
+    private javax.swing.JComboBox<String> selecionaDia;
     private javax.swing.JRadioButton selecionaFem;
     private javax.swing.JRadioButton selecionaMasc;
+    private javax.swing.JComboBox<String> selecionaMes;
     // End of variables declaration//GEN-END:variables
 }

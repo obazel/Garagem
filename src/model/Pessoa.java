@@ -8,10 +8,35 @@ public abstract class Pessoa {
 
     private String nome;
     private String cpf;
-    private String dataNascimento; //Mudar para Date.
+    private String dataNascimento; 
+    private int dia, mes, ano;
     private String end; //Podemos mudar para a funcionalidade dos Correios.
     private String telefone;
     private String sexo;
+
+    public int getDia() {
+        return dia;
+    }
+
+    public void setDia(int dia) {
+        this.dia = dia;
+    }
+
+    public int getMes() {
+        return mes;
+    }
+
+    public void setMes(int mes) {
+        this.mes = mes;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
 
     public String getNome() {
         return nome;

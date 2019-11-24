@@ -44,7 +44,7 @@ public class PaginaInicial extends javax.swing.JFrame {
 
             String linha = lerArq.readLine(); 
             String linhaSeparada[] = linha.split(";");
-            Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], linhaSeparada[6]));
+            Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], Integer.parseInt(linhaSeparada[6]), Integer.parseInt(linhaSeparada[7]), Integer.parseInt(linhaSeparada[8])));
 
              while (linha != null) {
                 linha = lerArq.readLine(); 
@@ -52,7 +52,7 @@ public class PaginaInicial extends javax.swing.JFrame {
                 if(linha != null){
 
                     linhaSeparada = linha.split(";");
-                    Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], linhaSeparada[6]));
+                    Cadastramento.adicionaCliente(new Cliente(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], Integer.parseInt(linhaSeparada[6]), Integer.parseInt(linhaSeparada[7]), Integer.parseInt(linhaSeparada[8])));
 
                 }
               }
@@ -96,7 +96,7 @@ public class PaginaInicial extends javax.swing.JFrame {
 
             String linha = lerArq.readLine(); 
             String linhaSeparada[] = linha.split(";");
-            Cadastramento.adicionaGerente(new Gerente(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], linhaSeparada[6]));
+            Cadastramento.adicionaGerente(new Gerente(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], Integer.parseInt(linhaSeparada[6]), Integer.parseInt(linhaSeparada[7]), Integer.parseInt(linhaSeparada[8])));
 
              while (linha != null) {
                 linha = lerArq.readLine(); 
@@ -104,7 +104,7 @@ public class PaginaInicial extends javax.swing.JFrame {
                 if(linha != null){
 
                     linhaSeparada = linha.split(";");
-                    Cadastramento.adicionaGerente(new Gerente(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], linhaSeparada[6]));
+                    Cadastramento.adicionaGerente(new Gerente(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], Integer.parseInt(linhaSeparada[6]), Integer.parseInt(linhaSeparada[7]), Integer.parseInt(linhaSeparada[8])));
 
                 }
               }
@@ -122,7 +122,7 @@ public class PaginaInicial extends javax.swing.JFrame {
 
             String linha = lerArq.readLine(); 
             String linhaSeparada[] = linha.split(";");
-            Cadastramento.adicionaVendedor(new Vendedor(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], linhaSeparada[6]));
+            Cadastramento.adicionaVendedor(new Vendedor(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], Integer.parseInt(linhaSeparada[6]), Integer.parseInt(linhaSeparada[7]), Integer.parseInt(linhaSeparada[8])));
 
              while (linha != null) {
                 linha = lerArq.readLine(); 
@@ -130,7 +130,7 @@ public class PaginaInicial extends javax.swing.JFrame {
                 if(linha != null){
 
                     linhaSeparada = linha.split(";");
-                    Cadastramento.adicionaVendedor(new Vendedor(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], linhaSeparada[6]));
+                    Cadastramento.adicionaVendedor(new Vendedor(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], Integer.parseInt(linhaSeparada[6]), Integer.parseInt(linhaSeparada[7]), Integer.parseInt(linhaSeparada[8])));
 
                 }
               }

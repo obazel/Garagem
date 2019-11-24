@@ -15,7 +15,13 @@ public class Cliente extends Pessoa {
     
     public Cliente(String cpf){ setCpf(cpf); }
  
-    public Cliente(int id, String nome, String dataNas, String cpf, String sexo, String end, String telefone){
+    public Cliente(int id, String nome, String cpf, String sexo, String end, String telefone, int dia, int mes, int ano){
+        setDia(dia);
+        setMes(mes);
+        setAno(ano);
+        
+        String dataNas = getDia() + "/" + getMes() + "/" + getAno();
+        
         setId(id);
         setNome(nome);
         setDataNascimento(dataNas);
