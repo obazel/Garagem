@@ -224,7 +224,7 @@ public class CadastroCliente extends javax.swing.JFrame{
                 FileWriter arquivo = new FileWriter("BancoClientes.txt", true);
                 PrintWriter gravar = new PrintWriter(arquivo);
                 
-                gravar.printf("%n"+inserirID.getText() + ";" +  inserirNome.getText() + ";" +  inserirDataNasc.getText() + ";" +  inserirCPF.getText() + ";" +  "Feminino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText());
+                gravar.printf(inserirID.getText() + ";" +  inserirNome.getText() + ";" +  inserirDataNasc.getText() + ";" +  inserirCPF.getText() + ";" +  "Feminino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText() + "%n");
                 
                 arquivo.close();
 
@@ -241,7 +241,7 @@ public class CadastroCliente extends javax.swing.JFrame{
                 FileWriter arquivo = new FileWriter("BancoClientes.txt", true);
                 PrintWriter gravar = new PrintWriter(arquivo);
                 
-                gravar.printf("%n"+inserirID.getText() + ";" +  inserirNome.getText() + ";" +  inserirDataNasc.getText() + ";" +  inserirCPF.getText() + ";" +  "Feminino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText());
+                gravar.printf(inserirID.getText() + ";" +  inserirNome.getText() + ";" +  inserirDataNasc.getText() + ";" +  inserirCPF.getText() + ";" +  "Feminino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText() + "%n");
                 
                 arquivo.close();
 

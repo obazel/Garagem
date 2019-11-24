@@ -69,14 +69,14 @@ public class ModuloFuncionario extends javax.swing.JFrame {
             }
         });
 
-        botaoCalculaSalarioGerente.setText("Contracheque gerente");
+        botaoCalculaSalarioGerente.setText("Contracheque Gerente");
         botaoCalculaSalarioGerente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botaoCalculaSalarioGerenteMouseClicked(evt);
             }
         });
 
-        botaoCalculaSalarioVendedor.setText("Contracheque vendedor");
+        botaoCalculaSalarioVendedor.setText("Contracheque Vendedor");
         botaoCalculaSalarioVendedor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botaoCalculaSalarioVendedorMouseClicked(evt);

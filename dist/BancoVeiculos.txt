@@ -1,0 +1,2 @@
+Vermelho;12500;NLA-1194;2008;Gol;VolksWagen
+Cinza;25000;NJK-8772;2014;KA;Ford

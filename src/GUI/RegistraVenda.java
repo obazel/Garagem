@@ -5,6 +5,9 @@
  */
 package GUI;
 import java.awt.Toolkit;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import javax.swing.JOptionPane;
 import util.*;
 
@@ -215,16 +218,29 @@ public class RegistraVenda extends javax.swing.JFrame {
                 Cadastramento.removeVeiculoDisponivel(venda.getVeiculo());
                 Cadastramento.adicionaVeiculosVendidos(venda.getVeiculo());
                 
+                 //Gravando venda no banco de dados
+                try {
+                    FileWriter arquivo = new FileWriter("BancoVendas.txt", true);
+                    PrintWriter gravar = new PrintWriter(arquivo);
+
+                    gravar.printf(inserirCliente.getText() + ";" +  inserirVeiculo.getText() + ";" +  caixaVendedores.getSelectedItem().toString() + ";" +  inserirID.getText() + ";" +  (selecionaMes.getSelectedIndex()+1) + ";" +  selecionaAno.getSelectedItem().toString() + "%n");
+
+                    arquivo.close();
+
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(null, "ERRO");
+                }
+
             }else{
-                
+
                 JOptionPane.showMessageDialog(null, "Veículo Não Encontrado!");
                 dispose();
             }
             
-        }else{
-            JOptionPane.showMessageDialog(null, "Cliente Não Encontrado!");
-            dispose();
-        }
+            }else{
+                JOptionPane.showMessageDialog(null, "Cliente Não Encontrado!");
+                dispose();
+            }
         dispose();
         
     }//GEN-LAST:event_botaoRealizarVendaMouseClicked

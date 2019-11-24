@@ -75,6 +75,8 @@ public class Cadastramento {
         }
         return c;
     }
+    
+   
     //Fim de Lista de Clientes
     
     //Lista de Gerentes

@@ -18,6 +18,8 @@ import model.Modelo;
 import model.Veiculo;
 import model.Vendedor;
 import util.Cadastramento;
+import util.CompraGaragem;
+import util.Venda;
 
 /**
  *
@@ -68,7 +70,7 @@ public class PaginaInicial extends javax.swing.JFrame {
 
             String linha = lerArq.readLine(); 
             String linhaSeparada[] = linha.split(";");
-            Cadastramento.adicionaVeiculoDisponivel(Cadastramento.adicionaVeiculo(new Veiculo(linhaSeparada[0], Double.parseDouble(linhaSeparada[1]), linhaSeparada[2], new Modelo(Integer.parseInt(linhaSeparada[3]), linhaSeparada[4], new Marca(linhaSeparada[5])))));
+            Cadastramento.adicionaVeiculo(Cadastramento.adicionaVeiculo(new Veiculo(linhaSeparada[0], Double.parseDouble(linhaSeparada[1]), linhaSeparada[2], new Modelo(Integer.parseInt(linhaSeparada[3]), linhaSeparada[4], new Marca(linhaSeparada[5])))));
 
              while (linha != null) {
                 linha = lerArq.readLine(); 
@@ -76,7 +78,7 @@ public class PaginaInicial extends javax.swing.JFrame {
                 if(linha != null){
 
                     linhaSeparada = linha.split(";");
-                    Cadastramento.adicionaVeiculoDisponivel(Cadastramento.adicionaVeiculo(new Veiculo(linhaSeparada[0], Double.parseDouble(linhaSeparada[1]), linhaSeparada[2], new Modelo(Integer.parseInt(linhaSeparada[3]), linhaSeparada[4], new Marca(linhaSeparada[5])))));
+                    Cadastramento.adicionaVeiculo(Cadastramento.adicionaVeiculo(new Veiculo(linhaSeparada[0], Double.parseDouble(linhaSeparada[1]), linhaSeparada[2], new Modelo(Integer.parseInt(linhaSeparada[3]), linhaSeparada[4], new Marca(linhaSeparada[5])))));
 
                 }
               }
@@ -130,6 +132,63 @@ public class PaginaInicial extends javax.swing.JFrame {
                     linhaSeparada = linha.split(";");
                     Cadastramento.adicionaVendedor(new Vendedor(Integer.parseInt(linhaSeparada[0]), linhaSeparada[1], linhaSeparada[2], linhaSeparada[3], linhaSeparada[4], linhaSeparada[5], linhaSeparada[6]));
 
+                }
+              }
+            arquivo.close();
+
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Erro de carregamento de dados.");
+        }
+        
+        //Carregando Banco de Dados das Vendas para o programa
+        try {
+            
+            FileReader arquivo = new FileReader("BancoVendas.txt");
+            BufferedReader lerArq = new BufferedReader(arquivo);
+
+            String linha = lerArq.readLine(); 
+            String linhaSeparada[] = linha.split(";");
+            Cadastramento.adicionaVenda(new Venda(Cadastramento.procuraCliente(linhaSeparada[0]), Cadastramento.procuraVeiculo(linhaSeparada[1]), Cadastramento.procuraVendedorNome(linhaSeparada[2]), Integer.parseInt(linhaSeparada[3]), Integer.parseInt(linhaSeparada[4]), Integer.parseInt(linhaSeparada[5])));
+            Cadastramento.adicionaVeiculosVendidos(Cadastramento.procuraVeiculo(linhaSeparada[1]));
+            Cadastramento.removeVeiculoDisponivel(Cadastramento.procuraVeiculo(linhaSeparada[1]));
+            
+             while (linha != null) {
+                linha = lerArq.readLine(); 
+
+                if(linha != null){
+
+                    linhaSeparada = linha.split(";");
+                    Cadastramento.adicionaVenda(new Venda(Cadastramento.procuraCliente(linhaSeparada[0]), Cadastramento.procuraVeiculo(linhaSeparada[1]), Cadastramento.procuraVendedorNome(linhaSeparada[2]), Integer.parseInt(linhaSeparada[3]), Integer.parseInt(linhaSeparada[4]), Integer.parseInt(linhaSeparada[5])));
+                    Cadastramento.adicionaVeiculosVendidos(Cadastramento.procuraVeiculo(linhaSeparada[1]));
+                    Cadastramento.removeVeiculoDisponivel(Cadastramento.procuraVeiculo(linhaSeparada[1]));
+                }
+              }
+            arquivo.close();
+
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Erro de carregamento de dados.");
+        }
+        
+        //Carregando Banco de Dados das Compras para o programa
+        try {
+            
+            FileReader arquivo = new FileReader("BancoCompras.txt");
+            BufferedReader lerArq = new BufferedReader(arquivo);
+
+            String linha = lerArq.readLine(); 
+            String linhaSeparada[] = linha.split(";");
+            Cadastramento.adicionaCompraGaragem(new CompraGaragem(Cadastramento.procuraCliente(linhaSeparada[0]), Cadastramento.procuraVeiculo(linhaSeparada[1]), Integer.parseInt(linhaSeparada[2]), Integer.parseInt(linhaSeparada[3]), Integer.parseInt(linhaSeparada[4])));
+            Cadastramento.adicionaVeiculoDisponivel(Cadastramento.procuraVeiculo(linhaSeparada[1]));
+            
+             while (linha != null) {
+                linha = lerArq.readLine(); 
+
+                if(linha != null){
+
+                    linhaSeparada = linha.split(";");
+                    Cadastramento.adicionaCompraGaragem(new CompraGaragem(Cadastramento.procuraCliente(linhaSeparada[0]), Cadastramento.procuraVeiculo(linhaSeparada[1]), Integer.parseInt(linhaSeparada[2]), Integer.parseInt(linhaSeparada[3]), Integer.parseInt(linhaSeparada[4])));
+                    Cadastramento.adicionaVeiculoDisponivel(Cadastramento.procuraVeiculo(linhaSeparada[1]));
+                        
                 }
               }
             arquivo.close();
