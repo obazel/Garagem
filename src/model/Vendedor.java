@@ -26,12 +26,12 @@ public class Vendedor extends Funcionario {
     
     public String toString(){
         return "\n» VENDEDOR «" +
-                "\n  »»Matrícula: " + getMatricula() + 
-                "\n  »»Nome: " + getNome() + 
-                "\n  »»Sexo: " + getSexo() + 
-                "\n  »»CPF: " + getCpf() +
-                "\n  »»Data de nascimento: " + getDataNascimento() + 
-                "\n  »»Telefone: " + getTelefone() + 
-                "\n  »»Endereço: " + getEnd();
+                "\n  »» Matrícula: " + getMatricula() + 
+                "\n  »» Nome: " + getNome() + 
+                "\n  »» Sexo: " + getSexo() + 
+                "\n  »» CPF: " + getCpf() +
+                "\n  »» Data de nascimento: " + getDataNascimento() + 
+                "\n  »» Telefone: " + getTelefone() + 
+                "\n  »» Endereço: " + getEnd() + "\n";
     }
 }

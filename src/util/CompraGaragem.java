@@ -18,9 +18,9 @@ public class CompraGaragem extends Transacao{
 
     public String toString(){
         return "\n» COMPRA REGISTRADA «" +
-                "\n  »»ID: " + getId() + 
-                "\n  »»Mês: " + getMes() + 
-                "\n  »»Ano: " + getAno() +
+                "\n  »» ID: " + getId() + 
+                "\n  »» Mês: " + getMes() + 
+                "\n  »» Ano: " + getAno() +
                 getCliente() +
                 getVeiculo() +
                 getVendedor();

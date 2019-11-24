@@ -20,6 +20,6 @@ public class Marca {
     
     public String toString(){
         return "\n» MARCA «" +
-                "\n  »» " + getNome();
+                "\n  »» " + getNome() + "\n";
     }
 }

@@ -32,10 +32,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -57,26 +54,19 @@
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="botaoVender" max="32767" attributes="0"/>
-                              <Component id="botaoCadastrarCarro" max="32767" attributes="0"/>
-                              <Component id="botaoCadastrarFuncionario" alignment="0" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="botaoCadastrarCarro" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="botaoRelatorios" alignment="1" max="32767" attributes="0"/>
-                              <Component id="botaoComprar" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="botaoVender" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="botaoCalculaSalario" max="32767" attributes="0"/>
+                          <Component id="botaoComprar" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="botaoDemissao" max="32767" attributes="0"/>
+                          <Component id="botaoAdmin" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -94,17 +84,11 @@
                   <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                   <Component id="botaoCadastrarCarro" min="-2" pref="42" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="botaoCadastrarFuncionario" min="-2" pref="42" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="botaoVender" min="-2" pref="42" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="botaoComprar" min="-2" pref="42" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="botaoRelatorios" min="-2" pref="42" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="botaoCalculaSalario" min="-2" pref="42" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="botaoDemissao" min="-2" pref="42" max="-2" attributes="0"/>
+                  <Component id="botaoAdmin" min="-2" pref="42" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -161,36 +145,12 @@
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botaoCadastrarCarroMouseClicked"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="botaoCadastrarFuncionario">
+        <Component class="javax.swing.JButton" name="botaoAdmin">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Cadastrar Funcion&#xe1;rio"/>
+            <Property name="text" type="java.lang.String" value="Administrador"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botaoCadastrarFuncionarioMouseClicked"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="botaoRelatorios">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Relat&#xf3;rios"/>
-          </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botaoRelatoriosMouseClicked"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="botaoCalculaSalario">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Contracheques"/>
-          </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botaoCalculaSalarioMouseClicked"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="botaoDemissao">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Demitir Funcion&#xe1;rio"/>
-          </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botaoDemissaoMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botaoAdminMouseClicked"/>
           </Events>
         </Component>
       </SubComponents>

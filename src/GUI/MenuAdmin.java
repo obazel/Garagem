@@ -40,10 +40,7 @@ public class MenuAdmin extends javax.swing.JFrame {
         botaoComprar = new javax.swing.JButton();
         botaoCadastrarCliente = new javax.swing.JButton();
         botaoCadastrarCarro = new javax.swing.JButton();
-        botaoCadastrarFuncionario = new javax.swing.JButton();
-        botaoRelatorios = new javax.swing.JButton();
-        botaoCalculaSalario = new javax.swing.JButton();
-        botaoDemissao = new javax.swing.JButton();
+        botaoAdmin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -85,31 +82,10 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
 
-        botaoCadastrarFuncionario.setText("Cadastrar Funcionário");
-        botaoCadastrarFuncionario.addMouseListener(new java.awt.event.MouseAdapter() {
+        botaoAdmin.setText("Administrador");
+        botaoAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botaoCadastrarFuncionarioMouseClicked(evt);
-            }
-        });
-
-        botaoRelatorios.setText("Relatórios");
-        botaoRelatorios.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botaoRelatoriosMouseClicked(evt);
-            }
-        });
-
-        botaoCalculaSalario.setText("Contracheques");
-        botaoCalculaSalario.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botaoCalculaSalarioMouseClicked(evt);
-            }
-        });
-
-        botaoDemissao.setText("Demitir Funcionário");
-        botaoDemissao.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botaoDemissaoMouseClicked(evt);
+                botaoAdminMouseClicked(evt);
             }
         });
 
@@ -127,21 +103,16 @@ public class MenuAdmin extends javax.swing.JFrame {
                             .addComponent(botaoCadastrarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(botaoVender, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(botaoCadastrarCarro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(botaoCadastrarFuncionario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(botaoCadastrarCarro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(botaoRelatorios, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(botaoComprar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(botaoVender, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(botaoCalculaSalario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(botaoComprar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(botaoDemissao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(botaoAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -155,17 +126,11 @@ public class MenuAdmin extends javax.swing.JFrame {
                 .addGap(13, 13, 13)
                 .addComponent(botaoCadastrarCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(botaoCadastrarFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botaoVender, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botaoComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(botaoRelatorios, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(botaoCalculaSalario, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(botaoDemissao, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botaoAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -177,9 +142,7 @@ public class MenuAdmin extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -211,25 +174,11 @@ public class MenuAdmin extends javax.swing.JFrame {
         c.setVisible(true);
     }//GEN-LAST:event_botaoComprarMouseClicked
 
-    private void botaoCadastrarFuncionarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoCadastrarFuncionarioMouseClicked
-        CadastroFuncionario c = new CadastroFuncionario();
-        c.setVisible(true);
-    }//GEN-LAST:event_botaoCadastrarFuncionarioMouseClicked
-
-    private void botaoRelatoriosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoRelatoriosMouseClicked
-        Relatorio r = new Relatorio();
-        r.setVisible(true);
-    }//GEN-LAST:event_botaoRelatoriosMouseClicked
-
-    private void botaoCalculaSalarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoCalculaSalarioMouseClicked
-        GeradorDeContraCheque f = new GeradorDeContraCheque();
-        f.setVisible(true);
-    }//GEN-LAST:event_botaoCalculaSalarioMouseClicked
-
-    private void botaoDemissaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoDemissaoMouseClicked
-        DemiteFuncionario f = new DemiteFuncionario();
-        f.setVisible(true);
-    }//GEN-LAST:event_botaoDemissaoMouseClicked
+    private void botaoAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoAdminMouseClicked
+        ModuloAdmin m = new ModuloAdmin();
+        m.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_botaoAdminMouseClicked
 
     /**
      * @param args the command line arguments
@@ -268,13 +217,10 @@ public class MenuAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botaoAdmin;
     private javax.swing.JButton botaoCadastrarCarro;
     private javax.swing.JButton botaoCadastrarCliente;
-    private javax.swing.JButton botaoCadastrarFuncionario;
-    private javax.swing.JButton botaoCalculaSalario;
     private javax.swing.JButton botaoComprar;
-    private javax.swing.JButton botaoDemissao;
-    private javax.swing.JButton botaoRelatorios;
     private javax.swing.JButton botaoVender;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

@@ -72,7 +72,7 @@ public class CadastroCliente extends javax.swing.JFrame{
 
         jLabel10.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("Cadastro de Cliente");
+        jLabel10.setText("CADASTRO DE CLIENTE");
         jLabel10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabel4.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N

@@ -38,6 +38,9 @@ public class DemiteFuncionario extends javax.swing.JFrame {
         for(int i = 0; i < Cadastramento.vendedores.size(); i++){
             caixaVendedores.addItem(Cadastramento.vendedores.get(i).getNome());
         }
+        for(int i = 0; i < Cadastramento.gerentes.size(); i++){
+            caixaVendedores.addItem(Cadastramento.gerentes.get(i).getNome());
+        }
     }
 
     /**
@@ -166,7 +169,7 @@ public class DemiteFuncionario extends javax.swing.JFrame {
             }
      }
      
-     JOptionPane.showConfirmDialog(null, "Funcionário demitido com sucesso!");
+     JOptionPane.showMessageDialog(null, "Funcionário demitido com sucesso!");
      
      dispose();
     }//GEN-LAST:event_botaoRealizarDemissaoMouseClicked

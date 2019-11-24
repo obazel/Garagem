@@ -41,7 +41,7 @@ public class Modelo {
     public String toString(){
         return "\n» MODELO «" +
                 "\n  »» " + getNomeModelo() +
-                "\n  »»Ano: " + getAno() +
+                "\n  »» Ano: " + getAno() +
                 getMarca().toString();
                 
     }

@@ -6,6 +6,13 @@
 package GUI;
 
 import java.awt.Toolkit;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.swing.JOptionPane;
+import model.Gerente;
+import model.Vendedor;
 import util.Cadastramento;
 
 
@@ -13,12 +20,12 @@ import util.Cadastramento;
  *
  * @author Matheus Henrick
  */
-public class GeradorDeContraCheque extends javax.swing.JFrame {
+public class GeradorDeContraChequeVendedor extends javax.swing.JFrame {
 
     /**
      * Creates new form CalculaFuncionario
      */
-    public GeradorDeContraCheque() {
+    public GeradorDeContraChequeVendedor() {
         initComponents();
         
         setTitle("GARAGEM");
@@ -30,10 +37,7 @@ public class GeradorDeContraCheque extends javax.swing.JFrame {
         for(int i = 0; i < Cadastramento.vendedores.size(); i++){
             caixaFuncionario.addItem(Cadastramento.vendedores.get(i).getNome());
         }
-        
-        for(int i = 0; i < Cadastramento.gerentes.size(); i++){
-            caixaFuncionario.addItem(Cadastramento.gerentes.get(i).getNome());
-        }
+
     }
 
     /**
@@ -56,6 +60,7 @@ public class GeradorDeContraCheque extends javax.swing.JFrame {
         paneSalario = new javax.swing.JTextArea();
         jLabel10 = new javax.swing.JLabel();
         caixaAno = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -66,7 +71,7 @@ public class GeradorDeContraCheque extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("CÁLCULO DE SALÁRIO");
+        jLabel2.setText("CONTRACHEQUE");
 
         jLabel8.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
         jLabel8.setText("Funcionário");
@@ -93,26 +98,31 @@ public class GeradorDeContraCheque extends javax.swing.JFrame {
 
         caixaAno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970", "1969", "1968", "1967", "1966", "1965", "1964", "1963", "1962", "1961", "1960", "1959", "1958", "1957", "1956", "1955", "1954", "1953", "1952", "1951", "1950", "1949", "1948", "1947", "1946", "1945", "1944", "1943", "1942", "1941", "1940", "1939", "1938", "1937", "1936", "1935", "1934", "1933", "1932", "1931", "1930", "1929", "1928", "1927", "1926", "1925", "1924", "1923", "1922", "1921", "1920", "1919" }));
 
+        jLabel3.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("PRÉVIA");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 321, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 371, Short.MAX_VALUE)
             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(caixaAno, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1)
-                    .addComponent(botaoCalcular, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(caixaFuncionario, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(caixaMes, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(caixaAno, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(botaoCalcular, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(caixaFuncionario, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(caixaMes, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel10)
                             .addComponent(jLabel8)
                             .addComponent(jLabel9))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -131,12 +141,14 @@ public class GeradorDeContraCheque extends javax.swing.JFrame {
                 .addComponent(caixaMes, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(caixaAno, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botaoCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -148,9 +160,31 @@ public class GeradorDeContraCheque extends javax.swing.JFrame {
     }
         
     private void botaoCalcularMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoCalcularMouseClicked
-        Cadastramento.calculaSalario(Cadastramento.procuraVendedorNome(caixaFuncionario.getSelectedItem().toString()), caixaMes.getSelectedIndex()+1, Integer.parseInt(caixaAno.getSelectedItem().toString()));
         
-        paneSalario.setText("|-----------CONTRACHEQUE-----------|\n" + "Funcionário: " + Cadastramento.procuraVendedorNome(caixaFuncionario.getSelectedItem().toString()) + "\n\nPeríodo de referência: " + caixaMes.getSelectedIndex()+1 + "/" + caixaAno.getSelectedItem().toString() +"\n\nSalário: " + Cadastramento.procuraVendedorNome(caixaFuncionario.getSelectedItem().toString()).getSalario());
+        if(Cadastramento.procuraVendedorNome(caixaFuncionario.getSelectedItem().toString()) instanceof model.Vendedor){
+            Cadastramento.calculaSalario(Cadastramento.procuraVendedorNome(caixaFuncionario.getSelectedItem().toString()), caixaMes.getSelectedIndex()+1, Integer.parseInt(caixaAno.getSelectedItem().toString()));
+        
+        paneSalario.setText("|-----------CONTRACHEQUE-----------|\n" + "Funcionário: " + Cadastramento.procuraVendedorNome(caixaFuncionario.getSelectedItem().toString()) + "\n\nPeríodo de referência: " + caixaMes.getSelectedItem() + "/" + caixaAno.getSelectedItem().toString() +"\n\nSalário: " + Cadastramento.procuraVendedorNome(caixaFuncionario.getSelectedItem().toString()).getSalario());
+        
+        //Criando arquivo de contracheque
+            try {
+                String nome = "Contracheque" + caixaFuncionario.getSelectedItem().toString() + "Ref" + caixaMes.getSelectedItem() + "-" + caixaAno.getSelectedItem().toString();
+                File file = new File(nome+".txt");
+                file.createNewFile();
+                FileWriter arquivo = new FileWriter(file);
+                PrintWriter gravar = new PrintWriter(arquivo);
+                
+                gravar.printf("|-----------CONTRACHEQUE-----------|%n" + "Funcionário: " + Cadastramento.procuraVendedorNome(caixaFuncionario.getSelectedItem().toString()) + "%n%nPeríodo de referência: " + caixaMes.getSelectedItem() + "/" + caixaAno.getSelectedItem().toString() +"%n%nSalário: " + Cadastramento.procuraVendedorNome(caixaFuncionario.getSelectedItem().toString()).getSalario());
+                
+                arquivo.close();
+
+            } catch (IOException ex) {
+                JOptionPane.showMessageDialog(null, "Erro na geração do contracheque!");
+                
+            }
+        }
+        
+        
     }//GEN-LAST:event_botaoCalcularMouseClicked
 
     /**
@@ -170,21 +204,27 @@ public class GeradorDeContraCheque extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GeradorDeContraCheque.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GeradorDeContraChequeVendedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GeradorDeContraCheque.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GeradorDeContraChequeVendedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GeradorDeContraCheque.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GeradorDeContraChequeVendedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GeradorDeContraCheque.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GeradorDeContraChequeVendedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GeradorDeContraCheque().setVisible(true);
+                new GeradorDeContraChequeVendedor().setVisible(true);
             }
         });
     }
@@ -197,6 +237,7 @@ public class GeradorDeContraCheque extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
