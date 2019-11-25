@@ -26,7 +26,7 @@ public class CadastroCarro extends javax.swing.JFrame {
      */
     public CadastroCarro() {
         initComponents();
-        setTitle("GARAGEM");
+        setTitle("SISTEMA - CONCESSIONÁRIA");
         setLocationRelativeTo(null);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setIcon();
@@ -47,7 +47,6 @@ public class CadastroCarro extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -58,6 +57,7 @@ public class CadastroCarro extends javax.swing.JFrame {
         inserirValor = new javax.swing.JTextField();
         inserirCor = new javax.swing.JTextField();
         inserirAno = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
         inserirMarca = new javax.swing.JTextField();
         inserirModelo = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
@@ -67,21 +67,24 @@ public class CadastroCarro extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(500, 500));
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(936, 305));
 
-        jLabel1.setFont(new java.awt.Font("Century", 0, 36)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("GARAGEM");
-
         jLabel5.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
-        jLabel5.setText("Cor");
+        jLabel5.setForeground(new java.awt.Color(153, 0, 0));
+        jLabel5.setText("COR");
 
         jLabel6.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
-        jLabel6.setText("Placa");
+        jLabel6.setForeground(new java.awt.Color(153, 0, 0));
+        jLabel6.setText("PLACA");
 
         jLabel7.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
-        jLabel7.setText("Valor");
+        jLabel7.setForeground(new java.awt.Color(153, 0, 0));
+        jLabel7.setText("VALOR");
 
+        jButton1.setBackground(new java.awt.Color(153, 0, 0));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Cadastrar");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -90,66 +93,78 @@ public class CadastroCarro extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
-        jLabel3.setText("Modelo");
+        jLabel3.setForeground(new java.awt.Color(153, 0, 0));
+        jLabel3.setText("MODELO");
 
         jLabel4.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
-        jLabel4.setText("Ano");
+        jLabel4.setForeground(new java.awt.Color(153, 0, 0));
+        jLabel4.setText("ANO");
 
         jLabel2.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(153, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("CADASTRO DE VEÍCULO");
 
-        jLabel8.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
-        jLabel8.setText("Marca");
+        inserirValor.setForeground(new java.awt.Color(153, 0, 0));
+        inserirValor.setSelectionColor(new java.awt.Color(255, 0, 0));
 
+        inserirCor.setSelectionColor(new java.awt.Color(153, 0, 0));
+
+        inserirAno.setSelectionColor(new java.awt.Color(153, 0, 0));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/logoGaragem.jpeg"))); // NOI18N
+        jLabel9.setLabelFor(this);
+
+        inserirMarca.setSelectionColor(new java.awt.Color(153, 0, 0));
+
+        inserirModelo.setSelectionColor(new java.awt.Color(153, 0, 0));
+
+        jLabel8.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(153, 0, 0));
+        jLabel8.setText("MARCA");
+
+        inserirPlaca.setForeground(new java.awt.Color(153, 0, 0));
         try {
             inserirPlaca.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("UUU-####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        inserirPlaca.setSelectionColor(new java.awt.Color(153, 0, 0));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE))))
-                        .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(inserirPlaca, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(inserirValor, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(inserirCor)
+                    .addComponent(inserirAno, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(inserirMarca, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(inserirModelo)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(inserirPlaca)
-                            .addComponent(inserirValor)
-                            .addComponent(inserirCor, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(inserirAno)
-                            .addComponent(inserirMarca)
-                            .addComponent(inserirModelo, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel8))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel8))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(inserirModelo, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -175,7 +190,7 @@ public class CadastroCarro extends javax.swing.JFrame {
                 .addComponent(inserirValor, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(9, 9, 9))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -183,14 +198,12 @@ public class CadastroCarro extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 635, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 688, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -285,7 +298,6 @@ public class CadastroCarro extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField inserirPlaca;
     private javax.swing.JTextField inserirValor;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -293,6 +305,7 @@ public class CadastroCarro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

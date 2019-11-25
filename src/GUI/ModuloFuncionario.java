@@ -18,7 +18,7 @@ public class ModuloFuncionario extends javax.swing.JFrame {
      */
     public ModuloFuncionario() {
         initComponents();
-        setTitle("GARAGEM");
+        setTitle("SISTEMA - CONCESSIONÁRIA");
         setLocationRelativeTo(null);
         setIcon();
     }
@@ -37,7 +37,7 @@ public class ModuloFuncionario extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         botaoCadastrarFuncionario = new javax.swing.JButton();
         botaoDemissao = new javax.swing.JButton();
@@ -46,44 +46,57 @@ public class ModuloFuncionario extends javax.swing.JFrame {
         botaoVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("Century", 0, 36)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("GARAGEM");
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/logoGaragem.jpeg"))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(153, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("SELECIONE UMA OPÇÃO");
 
-        botaoCadastrarFuncionario.setText("Cadastrar Funcionário");
+        botaoCadastrarFuncionario.setBackground(new java.awt.Color(153, 0, 0));
+        botaoCadastrarFuncionario.setForeground(new java.awt.Color(255, 255, 255));
+        botaoCadastrarFuncionario.setText("CADASTRAR NOVO FUNCIONÁRIO");
         botaoCadastrarFuncionario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botaoCadastrarFuncionarioMouseClicked(evt);
             }
         });
 
-        botaoDemissao.setText("Demitir Funcionário");
+        botaoDemissao.setBackground(new java.awt.Color(153, 0, 0));
+        botaoDemissao.setForeground(new java.awt.Color(255, 255, 255));
+        botaoDemissao.setText("DEMITIR FUNCIONÁRIO");
         botaoDemissao.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botaoDemissaoMouseClicked(evt);
             }
         });
 
-        botaoCalculaSalarioGerente.setText("Contracheque Gerente");
+        botaoCalculaSalarioGerente.setBackground(new java.awt.Color(153, 0, 0));
+        botaoCalculaSalarioGerente.setForeground(new java.awt.Color(255, 255, 255));
+        botaoCalculaSalarioGerente.setText("GERADOR DE CONTRACHEQUE - GERENTE");
         botaoCalculaSalarioGerente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botaoCalculaSalarioGerenteMouseClicked(evt);
             }
         });
 
-        botaoCalculaSalarioVendedor.setText("Contracheque Vendedor");
+        botaoCalculaSalarioVendedor.setBackground(new java.awt.Color(153, 0, 0));
+        botaoCalculaSalarioVendedor.setForeground(new java.awt.Color(255, 255, 255));
+        botaoCalculaSalarioVendedor.setText("GERADOR DE CONTRACHEQUE - VENDEDOR");
         botaoCalculaSalarioVendedor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botaoCalculaSalarioVendedorMouseClicked(evt);
             }
         });
 
-        botaoVoltar.setText("Voltar");
+        botaoVoltar.setBackground(new java.awt.Color(204, 0, 0));
+        botaoVoltar.setForeground(new java.awt.Color(255, 255, 255));
+        botaoVoltar.setText("VOLTAR");
         botaoVoltar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botaoVoltarMouseClicked(evt);
@@ -94,8 +107,10 @@ public class ModuloFuncionario extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel15)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,7 +124,7 @@ public class ModuloFuncionario extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1)
+                .addComponent(jLabel15)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -129,7 +144,7 @@ public class ModuloFuncionario extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -208,7 +223,7 @@ public class ModuloFuncionario extends javax.swing.JFrame {
     private javax.swing.JButton botaoCalculaSalarioVendedor;
     private javax.swing.JButton botaoDemissao;
     private javax.swing.JButton botaoVoltar;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

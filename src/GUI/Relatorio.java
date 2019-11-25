@@ -19,16 +19,16 @@ public class Relatorio extends javax.swing.JFrame {
      */
     public Relatorio() {
         initComponents();
-        setTitle("GARAGEM");
+        setTitle("SISTEMA - CONCESSIONÁRIA");
         setLocationRelativeTo(null);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setIcon();
         
-        caixaRelatorio.addItem("Relatório de Vendas");
-        caixaRelatorio.addItem("Lista de Clientes");
-        caixaRelatorio.addItem("Relatório de Compras");
-        caixaRelatorio.addItem("Lista de Gerentes");
-        caixaRelatorio.addItem("Lista de Vendedores");
+        caixaRelatorio.addItem("Vendas");
+        caixaRelatorio.addItem("Compras");
+        caixaRelatorio.addItem("Clientes");
+        caixaRelatorio.addItem("Gerentes");
+        caixaRelatorio.addItem("Vendedores");
         caixaRelatorio.addItem("Lista de Veículos Disponíveis");
         caixaRelatorio.addItem("Lista de Veículos Vendidos");
     }
@@ -43,7 +43,6 @@ public class Relatorio extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         caixaRelatorio = new javax.swing.JComboBox<>();
@@ -51,25 +50,29 @@ public class Relatorio extends javax.swing.JFrame {
         paneMostraRelatorio = new javax.swing.JTextPane();
         botaoGeraRelatório = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("Century", 0, 36)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("GARAGEM");
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(153, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("RELATÓRIOS");
+        jLabel2.setText("RELATÓRIO");
 
         jLabel4.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
-        jLabel4.setText("Selecione o relatório desejado");
+        jLabel4.setForeground(new java.awt.Color(153, 0, 0));
+        jLabel4.setText("SELECIONE UMA OPÇÃO");
 
         paneMostraRelatorio.setEditable(false);
         jScrollPane2.setViewportView(paneMostraRelatorio);
 
-        botaoGeraRelatório.setText("Gerar Relatório");
+        botaoGeraRelatório.setBackground(new java.awt.Color(153, 0, 0));
+        botaoGeraRelatório.setForeground(new java.awt.Color(255, 255, 255));
+        botaoGeraRelatório.setText("GERAR");
         botaoGeraRelatório.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botaoGeraRelatórioMouseClicked(evt);
@@ -77,19 +80,21 @@ public class Relatorio extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(153, 0, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("PRÉVIA");
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/logoGaragem.jpeg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 454, Short.MAX_VALUE)
             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane2)
                     .addComponent(caixaRelatorio, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel4)
@@ -97,12 +102,15 @@ public class Relatorio extends javax.swing.JFrame {
                     .addComponent(botaoGeraRelatório, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel15)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
@@ -112,8 +120,8 @@ public class Relatorio extends javax.swing.JFrame {
                 .addComponent(botaoGeraRelatório, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -121,11 +129,15 @@ public class Relatorio extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -133,19 +145,19 @@ public class Relatorio extends javax.swing.JFrame {
 
     private void botaoGeraRelatórioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoGeraRelatórioMouseClicked
         String s = caixaRelatorio.getSelectedItem().toString();
-        if(s.equalsIgnoreCase("relatório de compras")){
+        if(s.equalsIgnoreCase("compras")){
             
             paneMostraRelatorio.setText(Cadastramento.mostraCompraGaragem());
         }
-        if(s.equalsIgnoreCase("Relatório de Vendas")){
+        if(s.equalsIgnoreCase("vendas")){
             
             paneMostraRelatorio.setText(Cadastramento.mostraVendas());
         }
-        if(s.equalsIgnoreCase("Lista de Vendedores")){
+        if(s.equalsIgnoreCase("vendedores")){
             
             paneMostraRelatorio.setText(Cadastramento.mostraVendedores());
         }
-        if(s.equalsIgnoreCase("Lista de Gerentes")){
+        if(s.equalsIgnoreCase("gerentes")){
             
             paneMostraRelatorio.setText(Cadastramento.mostraGerentes());
         }
@@ -153,7 +165,7 @@ public class Relatorio extends javax.swing.JFrame {
            
             paneMostraRelatorio.setText(Cadastramento.mostraVeiculosDisponiveis());
         }
-        if(s.equalsIgnoreCase("Lista de Clientes")){
+        if(s.equalsIgnoreCase("clientes")){
            
             paneMostraRelatorio.setText(Cadastramento.mostraClientes());
 
@@ -207,7 +219,7 @@ public class Relatorio extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoGeraRelatório;
     private javax.swing.JComboBox<String> caixaRelatorio;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
