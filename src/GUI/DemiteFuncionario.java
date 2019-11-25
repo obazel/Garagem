@@ -147,7 +147,7 @@ public class DemiteFuncionario extends javax.swing.JFrame {
                 PrintWriter gravar = new PrintWriter(arquivo);
                 
                 for(Vendedor vendedor : Cadastramento.vendedores){
-                    gravar.printf(vendedor.getMatricula()+ ";" +  vendedor.getNome() + ";" +  vendedor.getDataNascimento() + ";" +  vendedor.getCpf() + ";" +  vendedor.getSexo() + ";" +  vendedor.getEnd() + ";" + vendedor.getTelefone() + "%n");
+                    gravar.printf(vendedor.getMatricula()+ ";" +  vendedor.getNome() + ";" +  vendedor.getCpf() + ";" +  vendedor.getSexo() + ";" +  vendedor.getEnd() + ";" + vendedor.getTelefone() + ";" + vendedor.getDia() + ";" + vendedor.getMes() + ";" + vendedor.getAno() + "%n");
                 }
 
                 arquivo.close();
@@ -168,7 +168,7 @@ public class DemiteFuncionario extends javax.swing.JFrame {
                 PrintWriter gravar = new PrintWriter(arquivo);
                 
                 for(Gerente gerente : Cadastramento.gerentes){
-                    gravar.printf(gerente.getMatricula()+ ";" +  gerente.getNome() + ";" +  gerente.getDataNascimento() + ";" +  gerente.getCpf() + ";" +  gerente.getSexo() + ";" +  gerente.getEnd() + ";" + gerente.getTelefone() + "%n");
+                    gravar.printf(gerente.getMatricula()+ ";" +  gerente.getNome() + ";" +  gerente.getCpf() + ";" +  gerente.getSexo() + ";" +  gerente.getEnd() + ";" + gerente.getTelefone() + ";" + gerente.getDia() + ";" + gerente.getMes() + ";" + gerente.getAno() + "%n");
                 }
 
                 arquivo.close();
