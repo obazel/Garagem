@@ -1,2 +1,1 @@
-1;Matheus Henrick;045656789-00;Masculino;Avenida Maria Pestana;(62) 9 9567-7666;8;2;1999
-12;lorena;00152217177;Feminino;av maria pestana;62 9 91882936;10111981
+1;Matheus Henrick;045.656.789-00;Masculino;Avenida Maria Pestana;(62) 9 9567-7666;8;2;1999

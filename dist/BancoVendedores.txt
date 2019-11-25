@@ -1,2 +1,2 @@
-20190202;Marlucia Ferreira;895334550-20;Feminino;Av. Maria Flores, Casa 1 Lote 22, Jardins Ville, Goiânia - GO;(62) 9 9123-8798;19;8;1978
-20191118;Marcio Neiva;895334550-20;Masculino;Av. A, Apto 102 Cond. Viveiras, Parque das Nações, Goiânia - GO;(62) 9 8978-6577;6;5;1988
+20190202;Marlucia Ferreira;895.334.550-20;Feminino;Av. Maria Flores, Casa 1 Lote 22, Jardins Ville, Goiânia - GO;(62) 9 9123-8798;19;8;1978
+20191118;Marcio Neiva;895.334.550-20;Masculino;Av. A, Apto 102 Cond. Viveiras, Parque das Nações, Goiânia - GO;(62) 9 8978-6577;6;5;1988
