@@ -64,7 +64,6 @@
               <Component id="inserirCPF" alignment="0" max="32767" attributes="0"/>
               <Component id="inserirNome" alignment="1" max="32767" attributes="0"/>
               <Component id="inserirMatricula" alignment="0" max="32767" attributes="0"/>
-              <Component id="inserirTelefone" alignment="0" max="32767" attributes="0"/>
               <Component id="inserirEndereco" alignment="0" max="32767" attributes="0"/>
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -113,6 +112,7 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
+              <Component id="inserirTelefone" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -144,8 +144,8 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel7" min="-2" pref="25" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="inserirTelefone" min="-2" pref="28" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                  <Component id="inserirTelefone" min="-2" pref="32" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel9" min="-2" pref="25" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -253,8 +253,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Telefone"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="inserirTelefone">
         </Component>
         <Component class="javax.swing.JButton" name="botaoCadastrar">
           <Properties>
@@ -533,6 +531,13 @@
               <Color blue="0" green="0" red="99" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Dia"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JFormattedTextField" name="inserirTelefone">
+          <Properties>
+            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+              <Format format="(##) #####-####" subtype="-1" type="5"/>
+            </Property>
           </Properties>
         </Component>
       </SubComponents>

@@ -11,8 +11,18 @@ public abstract class Transacao {
     private Cliente cliente;
     private Veiculo veiculo;
     private Funcionario vendedor;
+    private int dia;
     private int mes;
     private int ano;
+
+    public int getDia() {
+        return dia;
+    }
+
+    public void setDia(int dia) {
+        this.dia = dia;
+    }
+    
 
     public int getAno() {
         return ano;

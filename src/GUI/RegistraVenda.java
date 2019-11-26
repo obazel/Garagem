@@ -249,7 +249,7 @@ public class RegistraVenda extends javax.swing.JFrame {
                     FileWriter arquivo = new FileWriter("BancoVendas.txt", true);
                     PrintWriter gravar = new PrintWriter(arquivo);
 
-                    gravar.printf(inserirCliente.getText() + ";" +  inserirVeiculo.getText() + ";" +  caixaVendedores.getSelectedItem().toString() + ";" +  inserirID.getText() + ";" +  (selecionaMes.getSelectedIndex()+1) + ";" +  selecionaAno.getSelectedItem().toString() + "%n");
+                    gravar.printf(inserirCliente.getText() + ";" +  inserirVeiculo.getText() + ";" +  caixaVendedores.getSelectedItem().toString() + ";" +  inserirID.getText() + ";" + selecionaDia.getSelectedItem().toString() + ";" + (selecionaMes.getSelectedIndex()+1) + ";" +  selecionaAno.getSelectedItem().toString() + "%n");
 
                     arquivo.close();
 

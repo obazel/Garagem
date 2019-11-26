@@ -54,7 +54,6 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         inserirMatricula = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        inserirTelefone = new javax.swing.JTextField();
         botaoCadastrar = new javax.swing.JButton();
         caixaCargo = new javax.swing.JComboBox<>();
         selecionaMasc = new javax.swing.JRadioButton();
@@ -69,6 +68,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         selecionaDia = new javax.swing.JComboBox<>();
         jLabel12 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
+        inserirTelefone = new javax.swing.JFormattedTextField();
         jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -153,6 +153,12 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         jLabel16.setForeground(new java.awt.Color(153, 0, 0));
         jLabel16.setText("Dia");
 
+        try {
+            inserirTelefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) #####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -161,7 +167,6 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             .addComponent(inserirCPF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(inserirNome, javax.swing.GroupLayout.Alignment.TRAILING)
             .addComponent(inserirMatricula)
-            .addComponent(inserirTelefone)
             .addComponent(inserirEndereco)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,6 +206,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                                 .addComponent(selecionaAno, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addComponent(inserirTelefone)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -230,8 +236,8 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                     .addComponent(selecionaAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(inserirTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(2, 2, 2)
+                .addComponent(inserirTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -401,7 +407,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
     private javax.swing.JTextField inserirEndereco;
     private javax.swing.JTextField inserirMatricula;
     private javax.swing.JTextField inserirNome;
-    private javax.swing.JTextField inserirTelefone;
+    private javax.swing.JFormattedTextField inserirTelefone;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

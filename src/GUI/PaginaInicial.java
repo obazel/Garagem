@@ -148,7 +148,7 @@ public class PaginaInicial extends javax.swing.JFrame {
 
             String linha = lerArq.readLine(); 
             String linhaSeparada[] = linha.split(";");
-            Cadastramento.adicionaVenda(new Venda(Cadastramento.procuraCliente(linhaSeparada[0]), Cadastramento.procuraVeiculo(linhaSeparada[1]), Cadastramento.procuraVendedorNome(linhaSeparada[2]), Integer.parseInt(linhaSeparada[3]), Integer.parseInt(linhaSeparada[4]), Integer.parseInt(linhaSeparada[5])));
+            Cadastramento.adicionaVenda(new Venda(Cadastramento.procuraCliente(linhaSeparada[0]), Cadastramento.procuraVeiculo(linhaSeparada[1]), Cadastramento.procuraVendedorNome(linhaSeparada[2]), Integer.parseInt(linhaSeparada[3]), Integer.parseInt(linhaSeparada[4]), Integer.parseInt(linhaSeparada[5]), Integer.parseInt(linhaSeparada[6])));
             Cadastramento.adicionaVeiculosVendidos(Cadastramento.procuraVeiculo(linhaSeparada[1]));
             Cadastramento.removeVeiculoDisponivel(Cadastramento.procuraVeiculo(linhaSeparada[1]));
             
@@ -158,7 +158,7 @@ public class PaginaInicial extends javax.swing.JFrame {
                 if(linha != null){
 
                     linhaSeparada = linha.split(";");
-                    Cadastramento.adicionaVenda(new Venda(Cadastramento.procuraCliente(linhaSeparada[0]), Cadastramento.procuraVeiculo(linhaSeparada[1]), Cadastramento.procuraVendedorNome(linhaSeparada[2]), Integer.parseInt(linhaSeparada[3]), Integer.parseInt(linhaSeparada[4]), Integer.parseInt(linhaSeparada[5])));
+                    Cadastramento.adicionaVenda(new Venda(Cadastramento.procuraCliente(linhaSeparada[0]), Cadastramento.procuraVeiculo(linhaSeparada[1]), Cadastramento.procuraVendedorNome(linhaSeparada[2]), Integer.parseInt(linhaSeparada[3]), Integer.parseInt(linhaSeparada[4]), Integer.parseInt(linhaSeparada[5]), Integer.parseInt(linhaSeparada[6])));
                     Cadastramento.adicionaVeiculosVendidos(Cadastramento.procuraVeiculo(linhaSeparada[1]));
                     Cadastramento.removeVeiculoDisponivel(Cadastramento.procuraVeiculo(linhaSeparada[1]));
                 }
@@ -177,7 +177,7 @@ public class PaginaInicial extends javax.swing.JFrame {
 
             String linha = lerArq.readLine(); 
             String linhaSeparada[] = linha.split(";");
-            Cadastramento.adicionaCompraGaragem(new CompraGaragem(Cadastramento.procuraCliente(linhaSeparada[0]), Cadastramento.procuraVeiculo(linhaSeparada[1]), Integer.parseInt(linhaSeparada[2]), Integer.parseInt(linhaSeparada[3]), Integer.parseInt(linhaSeparada[4])));
+            Cadastramento.adicionaCompraGaragem(new CompraGaragem(Cadastramento.procuraCliente(linhaSeparada[0]), Cadastramento.procuraVeiculo(linhaSeparada[1]), Integer.parseInt(linhaSeparada[2]), Integer.parseInt(linhaSeparada[3]), Integer.parseInt(linhaSeparada[4]), Integer.parseInt(linhaSeparada[5])));
             Cadastramento.adicionaVeiculoDisponivel(Cadastramento.procuraVeiculo(linhaSeparada[1]));
             
              while (linha != null) {
@@ -186,7 +186,7 @@ public class PaginaInicial extends javax.swing.JFrame {
                 if(linha != null){
 
                     linhaSeparada = linha.split(";");
-                    Cadastramento.adicionaCompraGaragem(new CompraGaragem(Cadastramento.procuraCliente(linhaSeparada[0]), Cadastramento.procuraVeiculo(linhaSeparada[1]), Integer.parseInt(linhaSeparada[2]), Integer.parseInt(linhaSeparada[3]), Integer.parseInt(linhaSeparada[4])));
+                    Cadastramento.adicionaCompraGaragem(new CompraGaragem(Cadastramento.procuraCliente(linhaSeparada[0]), Cadastramento.procuraVeiculo(linhaSeparada[1]), Integer.parseInt(linhaSeparada[2]), Integer.parseInt(linhaSeparada[3]), Integer.parseInt(linhaSeparada[4]), Integer.parseInt(linhaSeparada[5])));
                     Cadastramento.adicionaVeiculoDisponivel(Cadastramento.procuraVeiculo(linhaSeparada[1]));
                         
                 }

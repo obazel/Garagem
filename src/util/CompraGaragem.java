@@ -7,7 +7,8 @@ public class CompraGaragem extends Transacao{
     public CompraGaragem(){}
 
     //Nesta classe ocorre a transação de compra por parte da Garagem de um carro de terceiros.
-    public CompraGaragem(Cliente clienteVendedor, Veiculo veiculoComprado, int id, int mes, int ano){
+    public CompraGaragem(Cliente clienteVendedor, Veiculo veiculoComprado, int id, int dia, int mes, int ano){
+        setDia(dia);
         setId(id);
         setCliente(clienteVendedor);
         setVeiculo(veiculoComprado);
