@@ -1,2 +1,3 @@
 Vermelho;12500;NLA-1194;2008;Gol;VolksWagen
 Cinza;25000;NJK-8772;2014;KA;Ford
+preto;60000;SAL-2211;2019;HB20;Hyundai

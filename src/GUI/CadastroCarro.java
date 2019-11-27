@@ -229,18 +229,11 @@ public class CadastroCarro extends javax.swing.JFrame {
         Cadastramento.adicionaVeiculo(veiculo);
         Cadastramento.adicionaVeiculoDisponivel(veiculo);
 
-        inserirMarca.setText("");
-        inserirModelo.setText("");
-        inserirAno.setText("");
-        inserirCor.setText("");
-        inserirPlaca.setText("");
-        inserirValor.setText("");
-
         try {
             FileWriter arquivo = new FileWriter("BancoVeiculos.txt", true);
             PrintWriter gravar = new PrintWriter(arquivo);
 
-            gravar.printf("%n" + inserirCor.getText() + ";" +  inserirValor.getText() + ";" +  inserirPlaca.getText() + ";" +  inserirAno.getText() + ";" +  inserirModelo.getText() + ";" + inserirMarca.getText());
+            gravar.printf(inserirCor.getText() + ";" +  inserirValor.getText() + ";" +  inserirPlaca.getText() + ";" +  inserirAno.getText() + ";" +  inserirModelo.getText() + ";" + inserirMarca.getText()+"%n");
 
             arquivo.close();
 

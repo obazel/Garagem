@@ -1,0 +1,15 @@
+|-----------CONTRACHEQUE-----------|
+Funcionário: 
+» GERENTE «
+  »» Matrícula: 20190123
+  »» Nome: Carlos Augusto
+  »» Sexo: Masculino
+  »» CPF: 219.721.730-57
+  »» Data de nascimento: 10/12/1978
+  »» Telefone: (62) 9 8533-5666
+  »» Endereço: Rua Hermogenes, QD 6 Casa 1, Bairro GlÃ³ria, GoiÃ¢nia - GO
+
+
+Período de referência: janeiro/2019
+
+Salário: 5000.0
