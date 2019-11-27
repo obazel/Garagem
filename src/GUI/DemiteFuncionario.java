@@ -59,8 +59,10 @@ public class DemiteFuncionario extends javax.swing.JFrame {
         caixaVendedores = new javax.swing.JComboBox<>();
         botaoRealizarDemissao = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
+        botaoFechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -83,7 +85,7 @@ public class DemiteFuncionario extends javax.swing.JFrame {
 
         botaoRealizarDemissao.setBackground(new java.awt.Color(255, 255, 255));
         botaoRealizarDemissao.setForeground(new java.awt.Color(153, 0, 0));
-        botaoRealizarDemissao.setText("Demitir");
+        botaoRealizarDemissao.setText("DEMITIR");
         botaoRealizarDemissao.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botaoRealizarDemissaoMouseClicked(evt);
@@ -91,6 +93,15 @@ public class DemiteFuncionario extends javax.swing.JFrame {
         });
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/logoGaragem.jpeg"))); // NOI18N
+
+        botaoFechar.setBackground(new java.awt.Color(255, 255, 255));
+        botaoFechar.setForeground(new java.awt.Color(153, 0, 0));
+        botaoFechar.setText("FECHAR");
+        botaoFechar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botaoFecharMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -100,11 +111,12 @@ public class DemiteFuncionario extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(caixaVendedores, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botaoRealizarDemissao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel4)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(botaoRealizarDemissao, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(botaoFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel15)
@@ -121,7 +133,9 @@ public class DemiteFuncionario extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(caixaVendedores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(botaoRealizarDemissao, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoRealizarDemissao, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -241,6 +255,10 @@ public class DemiteFuncionario extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_caixaVendedoresKeyTyped
 
+    private void botaoFecharMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoFecharMouseClicked
+        dispose();
+    }//GEN-LAST:event_botaoFecharMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -277,6 +295,7 @@ public class DemiteFuncionario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botaoFechar;
     private javax.swing.JButton botaoRealizarDemissao;
     private javax.swing.JComboBox<String> caixaVendedores;
     private javax.swing.JLabel jLabel15;

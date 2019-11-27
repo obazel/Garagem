@@ -67,8 +67,10 @@ public class CadastroCliente extends javax.swing.JFrame{
         inserirTelefone = new javax.swing.JFormattedTextField();
         inserirCPF = new javax.swing.JFormattedTextField();
         jLabel14 = new javax.swing.JLabel();
+        botaoFechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         setResizable(false);
 
         painelCadastraCliente.setBackground(new java.awt.Color(255, 255, 255));
@@ -104,7 +106,7 @@ public class CadastroCliente extends javax.swing.JFrame{
 
         botaoCadastrar.setBackground(new java.awt.Color(153, 0, 0));
         botaoCadastrar.setForeground(new java.awt.Color(255, 255, 255));
-        botaoCadastrar.setText("Cadastrar");
+        botaoCadastrar.setText("CADASTRAR");
         botaoCadastrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 clicarBotaoCadastrar(evt);
@@ -162,6 +164,15 @@ public class CadastroCliente extends javax.swing.JFrame{
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/logoGaragem.jpeg"))); // NOI18N
 
+        botaoFechar.setBackground(new java.awt.Color(153, 0, 0));
+        botaoFechar.setForeground(new java.awt.Color(255, 255, 255));
+        botaoFechar.setText("FECHAR");
+        botaoFechar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botaoFecharclicarBotaoCadastrar(evt);
+            }
+        });
+
         javax.swing.GroupLayout painelCadastraClienteLayout = new javax.swing.GroupLayout(painelCadastraCliente);
         painelCadastraCliente.setLayout(painelCadastraClienteLayout);
         painelCadastraClienteLayout.setHorizontalGroup(
@@ -199,22 +210,22 @@ public class CadastroCliente extends javax.swing.JFrame{
                             .addGroup(painelCadastraClienteLayout.createSequentialGroup()
                                 .addComponent(inserirTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(botaoCadastrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(botaoFechar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(painelCadastraClienteLayout.createSequentialGroup()
                                 .addGroup(painelCadastraClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(painelCadastraClienteLayout.createSequentialGroup()
-                                        .addGroup(painelCadastraClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(inserirCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel4)
-                                            .addComponent(jLabel5))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(painelCadastraClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jLabel6)
-                                            .addComponent(inserirID, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(jLabel9)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel7))
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                                    .addComponent(inserirCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5))
+                                .addGap(18, 18, 18)
+                                .addGroup(painelCadastraClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel6)
+                                    .addComponent(inserirID, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel3)
+                            .addGroup(painelCadastraClienteLayout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addGap(246, 246, 246)
+                                .addComponent(botaoCadastrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addContainerGap())))
         );
         painelCadastraClienteLayout.setVerticalGroup(
@@ -253,11 +264,13 @@ public class CadastroCliente extends javax.swing.JFrame{
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(inserirEndereco, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(painelCadastraClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(inserirTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(painelCadastraClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botaoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(painelCadastraClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(inserirTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(103, 103, 103))
         );
 
@@ -328,6 +341,10 @@ public class CadastroCliente extends javax.swing.JFrame{
         }
     }//GEN-LAST:event_inserirNomeKeyTyped
 
+    private void botaoFecharclicarBotaoCadastrar(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoFecharclicarBotaoCadastrar
+        dispose();
+    }//GEN-LAST:event_botaoFecharclicarBotaoCadastrar
+
     /**
      * @param args the command line arguments
      */
@@ -365,6 +382,7 @@ public class CadastroCliente extends javax.swing.JFrame{
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoCadastrar;
+    private javax.swing.JButton botaoFechar;
     private javax.swing.ButtonGroup botoesSexo;
     private javax.swing.JFormattedTextField inserirCPF;
     private javax.swing.JTextField inserirEndereco;

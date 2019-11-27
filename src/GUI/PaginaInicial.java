@@ -219,8 +219,10 @@ public class PaginaInicial extends javax.swing.JFrame {
         botaoEntrar1 = new javax.swing.JButton();
         botaoEntrar = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
+        botaoFechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -255,13 +257,22 @@ public class PaginaInicial extends javax.swing.JFrame {
         botaoEntrar.setBackground(new java.awt.Color(153, 0, 0));
         botaoEntrar.setForeground(new java.awt.Color(255, 255, 255));
         botaoEntrar.setText("ENTRAR");
-        botaoEntrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoEntrarActionPerformed(evt);
+        botaoEntrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botaoEntrarMouseClicked(evt);
             }
         });
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/logoGaragem.jpeg"))); // NOI18N
+
+        botaoFechar.setBackground(new java.awt.Color(153, 0, 0));
+        botaoFechar.setForeground(new java.awt.Color(255, 255, 255));
+        botaoFechar.setText("FECHAR");
+        botaoFechar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botaoFecharMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -275,12 +286,14 @@ public class PaginaInicial extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(botaoEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(inserirSenha, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(caixaLogin, javax.swing.GroupLayout.Alignment.LEADING, 0, 290, Short.MAX_VALUE)))
+                    .addComponent(inserirSenha, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(caixaLogin, javax.swing.GroupLayout.Alignment.LEADING, 0, 290, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(botaoEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(botaoFechar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botaoEntrar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -302,9 +315,11 @@ public class PaginaInicial extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(inserirSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(botaoEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(botaoEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botaoFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(botaoEntrar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 18, Short.MAX_VALUE))
+                .addGap(0, 11, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -320,36 +335,6 @@ public class PaginaInicial extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void botaoEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoEntrarActionPerformed
-        
-        String senha = new String(inserirSenha.getPassword());
-        
-        if(caixaLogin.getSelectedItem().toString().equalsIgnoreCase("admin")){
-            if(senha.equalsIgnoreCase("admin")){
-                JOptionPane.showMessageDialog(null, "Login realizado com sucesso.");
-                MenuAdmin m = new MenuAdmin();
-                m.setVisible(true);
-                dispose();
-            }else{
-                JOptionPane.showMessageDialog(null, "Revise a senha ou login.");
-            }
-        }
-        
-        
-        if(caixaLogin.getSelectedItem().toString().equalsIgnoreCase("funcionário")){
-            if(senha.equalsIgnoreCase("123")){
-                JOptionPane.showMessageDialog(null, "Login realizado com sucesso.");
-                MenuFuncionario n = new MenuFuncionario();
-                n.setVisible(true);
-                dispose();
-            }else{
-                JOptionPane.showMessageDialog(null, "Revise a senha ou login.");
-            }
-        }
-        
-
-    }//GEN-LAST:event_botaoEntrarActionPerformed
 
     private void inserirSenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_inserirSenhaKeyPressed
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
@@ -384,6 +369,37 @@ public class PaginaInicial extends javax.swing.JFrame {
         ModuloExibicaoCliente m = new ModuloExibicaoCliente();
         m.setVisible(true);
     }//GEN-LAST:event_botaoEntrar1ActionPerformed
+
+    private void botaoEntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoEntrarMouseClicked
+        String senha = new String(inserirSenha.getPassword());
+
+            if(caixaLogin.getSelectedItem().toString().equalsIgnoreCase("admin")){
+                if(senha.equalsIgnoreCase("admin")){
+                    JOptionPane.showMessageDialog(null, "Login realizado com sucesso.");
+                    MenuAdmin m = new MenuAdmin();
+                    m.setVisible(true);
+                    dispose();
+                }else{
+                    JOptionPane.showMessageDialog(null, "Revise a senha ou login.");
+                }
+            }
+
+
+            if(caixaLogin.getSelectedItem().toString().equalsIgnoreCase("funcionário")){
+                if(senha.equalsIgnoreCase("123")){
+                    JOptionPane.showMessageDialog(null, "Login realizado com sucesso.");
+                    MenuFuncionario n = new MenuFuncionario();
+                    n.setVisible(true);
+                    dispose();
+                }else{
+                    JOptionPane.showMessageDialog(null, "Revise a senha ou login.");
+                }
+            }
+    }//GEN-LAST:event_botaoEntrarMouseClicked
+
+    private void botaoFecharMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoFecharMouseClicked
+        dispose();
+    }//GEN-LAST:event_botaoFecharMouseClicked
 
     /**
      * @param args the command line arguments
@@ -427,6 +443,7 @@ public class PaginaInicial extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoEntrar;
     private javax.swing.JButton botaoEntrar1;
+    private javax.swing.JButton botaoFechar;
     private javax.swing.JComboBox<String> caixaLogin;
     private javax.swing.JPasswordField inserirSenha;
     private javax.swing.JLabel jLabel15;

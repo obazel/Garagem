@@ -3,6 +3,7 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="undecorated" type="boolean" value="true"/>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
@@ -24,10 +25,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel1" pref="645" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -55,7 +53,11 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="botaoGestaoFuncionarios" max="32767" attributes="0"/>
                       <Component id="botaoRelatorios" alignment="0" max="32767" attributes="0"/>
-                      <Component id="botaoVoltar" alignment="1" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="botaoMinimizar" min="-2" pref="308" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="botaoVoltar" min="-2" pref="309" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -77,7 +79,10 @@
                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   <Component id="botaoGestaoFuncionarios" min="-2" pref="42" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="botaoVoltar" min="-2" pref="42" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="botaoVoltar" alignment="3" min="-2" pref="42" max="-2" attributes="0"/>
+                      <Component id="botaoMinimizar" alignment="3" min="-2" pref="42" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -144,6 +149,20 @@
               <Image iconType="3" name="/GUI/logoGaragem.jpeg"/>
             </Property>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="botaoMinimizar">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="99" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="MINIMIZAR"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botaoMinimizarMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

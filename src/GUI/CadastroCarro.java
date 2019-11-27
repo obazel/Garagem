@@ -62,8 +62,10 @@ public class CadastroCarro extends javax.swing.JFrame {
         inserirModelo = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         inserirPlaca = new javax.swing.JFormattedTextField();
+        botaoVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         setResizable(false);
         setSize(new java.awt.Dimension(500, 500));
 
@@ -85,7 +87,7 @@ public class CadastroCarro extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(153, 0, 0));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Cadastrar");
+        jButton1.setText("CADASTRAR");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 clicarBotaoCadastrar(evt);
@@ -131,6 +133,15 @@ public class CadastroCarro extends javax.swing.JFrame {
         }
         inserirPlaca.setSelectionColor(new java.awt.Color(153, 0, 0));
 
+        botaoVoltar.setBackground(new java.awt.Color(153, 0, 0));
+        botaoVoltar.setForeground(new java.awt.Color(255, 255, 255));
+        botaoVoltar.setText("FECHAR");
+        botaoVoltar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botaoVoltarclicarBotaoCadastrar(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -140,7 +151,6 @@ public class CadastroCarro extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,20 +162,26 @@ public class CadastroCarro extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(inserirMarca)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(inserirAno, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 302, Short.MAX_VALUE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(inserirPlaca, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 302, Short.MAX_VALUE))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(inserirAno, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel6)
-                            .addComponent(inserirPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(10, 10, 10)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(inserirValor, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(inserirCor)
                             .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel5))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
+                                    .addComponent(inserirValor, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(inserirCor)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel7)
+                                            .addComponent(jLabel5))
+                                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(botaoVoltar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -199,7 +215,9 @@ public class CadastroCarro extends javax.swing.JFrame {
                     .addComponent(inserirPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(inserirValor, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -256,6 +274,10 @@ public class CadastroCarro extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_clicarBotaoCadastrar
 
+    private void botaoVoltarclicarBotaoCadastrar(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoVoltarclicarBotaoCadastrar
+        dispose();
+    }//GEN-LAST:event_botaoVoltarclicarBotaoCadastrar
+
      private void setIcon(){
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("programicon.png")));
     }
@@ -296,6 +318,7 @@ public class CadastroCarro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botaoVoltar;
     private javax.swing.JTextField inserirAno;
     private javax.swing.JTextField inserirCor;
     private javax.swing.JTextField inserirMarca;
