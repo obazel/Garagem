@@ -49,11 +49,11 @@ public class Veiculo {
     }
 
     public String toString(){
-        return  getModelo() +
-                "\n» VEÍCULO «" +
+        return "\n» VEÍCULO «" +
                 "\n  »» Cor: " + getCor() + 
                 "\n  »» Placa: " + getPlaca() + 
-                "\n  »» Valor: R$" + Math.round(getValor()) + ",00";
+                "\n  »» Valor: R$" + Math.round(getValor()) + ",00" +
+                getModelo();
                  
     }
 }

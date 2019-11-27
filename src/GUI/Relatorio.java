@@ -6,6 +6,7 @@
 package GUI;
 
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 import util.Cadastramento;
 
 /**
@@ -66,6 +67,12 @@ public class Relatorio extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(153, 0, 0));
         jLabel4.setText("SELECIONE UMA OPÇÃO");
+
+        caixaRelatorio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                caixaRelatorioKeyPressed(evt);
+            }
+        });
 
         paneMostraRelatorio.setEditable(false);
         jScrollPane2.setViewportView(paneMostraRelatorio);
@@ -176,6 +183,42 @@ public class Relatorio extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_botaoGeraRelatórioMouseClicked
+
+    private void caixaRelatorioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_caixaRelatorioKeyPressed
+        
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            String s = caixaRelatorio.getSelectedItem().toString();
+            if(s.equalsIgnoreCase("compras")){
+
+                paneMostraRelatorio.setText(Cadastramento.mostraCompraGaragem());
+            }
+            if(s.equalsIgnoreCase("vendas")){
+
+                paneMostraRelatorio.setText(Cadastramento.mostraVendas());
+            }
+            if(s.equalsIgnoreCase("vendedores")){
+
+                paneMostraRelatorio.setText(Cadastramento.mostraVendedores());
+            }
+            if(s.equalsIgnoreCase("gerentes")){
+
+                paneMostraRelatorio.setText(Cadastramento.mostraGerentes());
+            }
+            if(s.equalsIgnoreCase("Lista de Veículos Disponíveis")){
+
+                paneMostraRelatorio.setText(Cadastramento.mostraVeiculosDisponiveis());
+            }
+            if(s.equalsIgnoreCase("clientes")){
+
+                paneMostraRelatorio.setText(Cadastramento.mostraClientes());
+
+            }
+            if(s.equalsIgnoreCase("Lista de Veículos Vendidos")){
+
+                paneMostraRelatorio.setText(Cadastramento.mostraVeiculosVendidos());
+            }
+        }
+    }//GEN-LAST:event_caixaRelatorioKeyPressed
 
      private void setIcon(){
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("programicon.png")));

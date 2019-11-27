@@ -6,6 +6,7 @@
 package GUI;
 
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -73,6 +74,12 @@ public class DemiteFuncionario extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(153, 0, 0));
         jLabel4.setText("SELECIONE O FUNCIONÁRIO");
+
+        caixaVendedores.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                caixaVendedoresKeyTyped(evt);
+            }
+        });
 
         botaoRealizarDemissao.setBackground(new java.awt.Color(255, 255, 255));
         botaoRealizarDemissao.setForeground(new java.awt.Color(153, 0, 0));
@@ -182,6 +189,57 @@ public class DemiteFuncionario extends javax.swing.JFrame {
      
      dispose();
     }//GEN-LAST:event_botaoRealizarDemissaoMouseClicked
+
+    private void caixaVendedoresKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_caixaVendedoresKeyTyped
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            
+            if(Cadastramento.procuraVendedorNome(caixaVendedores.getSelectedItem().toString()) instanceof Vendedor){
+                Cadastramento.removeVendedor(Cadastramento.procuraVendedorNome(caixaVendedores.getSelectedItem().toString()));
+
+                File file = new File("BancoVendedores.txt");
+                file.delete();
+
+                try {
+                       FileWriter arquivo = new FileWriter("BancoVendedores.txt", true);
+                       PrintWriter gravar = new PrintWriter(arquivo);
+
+                       for(Vendedor vendedor : Cadastramento.vendedores){
+                           gravar.printf(vendedor.getMatricula()+ ";" +  vendedor.getNome() + ";" +  vendedor.getCpf() + ";" +  vendedor.getSexo() + ";" +  vendedor.getEnd() + ";" + vendedor.getTelefone() + ";" + vendedor.getDia() + ";" + vendedor.getMes() + ";" + vendedor.getAno() + "%n");
+                       }
+
+                       arquivo.close();
+
+                   } catch (IOException ex) {
+                       JOptionPane.showMessageDialog(null, "ERRO DE ARQUIVO");
+                   }  
+            }
+
+            if(Cadastramento.procuraGerenteNome(caixaVendedores.getSelectedItem().toString()) instanceof Gerente){
+                Cadastramento.removeGerente(Cadastramento.procuraGerenteNome(caixaVendedores.getSelectedItem().toString()));
+
+                File file = new File("BancoGerentes.txt");
+                file.delete();
+
+                try {
+                       FileWriter arquivo = new FileWriter("BancoGerentes.txt", true);
+                       PrintWriter gravar = new PrintWriter(arquivo);
+
+                       for(Gerente gerente : Cadastramento.gerentes){
+                           gravar.printf(gerente.getMatricula()+ ";" +  gerente.getNome() + ";" +  gerente.getCpf() + ";" +  gerente.getSexo() + ";" +  gerente.getEnd() + ";" + gerente.getTelefone() + ";" + gerente.getDia() + ";" + gerente.getMes() + ";" + gerente.getAno() + "%n");
+                       }
+
+                       arquivo.close();
+
+                   } catch (IOException ex) {
+                       JOptionPane.showMessageDialog(null, "ERRO DE ARQUIVO");
+                   }
+            }
+
+            JOptionPane.showMessageDialog(null, "Funcionário demitido com sucesso!");
+
+            dispose();
+        }
+    }//GEN-LAST:event_caixaVendedoresKeyTyped
 
     /**
      * @param args the command line arguments
