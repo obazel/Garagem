@@ -219,7 +219,7 @@ public class GeradorDeContraChequeVendedor extends javax.swing.JFrame {
                 arquivo.close();
 
             } catch (IOException ex) {
-                JOptionPane.showMessageDialog(null, "Erro na geração do contracheque!");
+                JOptionPane.showMessageDialog(null, "ERRO - GERAÇÃO DE CONTRACHEQUE!");
                 
             }
         }

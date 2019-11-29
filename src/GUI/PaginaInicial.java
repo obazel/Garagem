@@ -59,7 +59,7 @@ public class PaginaInicial extends javax.swing.JFrame {
             arquivo.close();
 
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Erro de carregamento de dados.");
+            JOptionPane.showMessageDialog(null, "ERRO - BANCO DE DADOS");
         }
         
         //Carregando Banco de Dados dos Veiculos para o programa
@@ -85,7 +85,7 @@ public class PaginaInicial extends javax.swing.JFrame {
             arquivo.close();
 
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Erro de carregamento de dados.");
+            JOptionPane.showMessageDialog(null, "ERRO - BANCO DE DADOS");
         }
         
         //Carregando Banco de Dados dos Gerentes para o programa
@@ -111,7 +111,7 @@ public class PaginaInicial extends javax.swing.JFrame {
             arquivo.close();
 
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Erro de carregamento de dados.");
+            JOptionPane.showMessageDialog(null, "ERRO - BANCO DE DADOS");
         }
         
         //Carregando Banco de Dados dos Vendedores para o programa
@@ -137,7 +137,7 @@ public class PaginaInicial extends javax.swing.JFrame {
             arquivo.close();
 
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Erro de carregamento de dados.");
+            JOptionPane.showMessageDialog(null, "ERRO - BANCO DE DADOS");
         }
         
         //Carregando Banco de Dados das Vendas para o programa
@@ -166,7 +166,7 @@ public class PaginaInicial extends javax.swing.JFrame {
             arquivo.close();
 
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Erro de carregamento de dados.");
+            JOptionPane.showMessageDialog(null, "ERRO - BANCO DE DADOS");
         }
         
         //Carregando Banco de Dados das Compras para o programa
@@ -194,7 +194,7 @@ public class PaginaInicial extends javax.swing.JFrame {
             arquivo.close();
 
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Erro de carregamento de dados.");
+            JOptionPane.showMessageDialog(null, "ERRO - BANCO DE DADOS");
         }
         
         caixaLogin.addItem("ADMIN");
@@ -342,24 +342,24 @@ public class PaginaInicial extends javax.swing.JFrame {
 
             if(caixaLogin.getSelectedItem().toString().equalsIgnoreCase("admin")){
                 if(senha.equalsIgnoreCase("admin")){
-                    JOptionPane.showMessageDialog(null, "Login realizado com sucesso.");
+                    JOptionPane.showMessageDialog(null, "LOGIN REALIZADO COM SUCESSO!");
                     MenuAdmin m = new MenuAdmin();
                     m.setVisible(true);
                     dispose();
                 }else{
-                    JOptionPane.showMessageDialog(null, "Revise a senha ou login.");
+                    JOptionPane.showMessageDialog(null, "REVISE A SENHA OU LOGIN!");
                 }
             }
 
 
             if(caixaLogin.getSelectedItem().toString().equalsIgnoreCase("funcionário")){
                 if(senha.equalsIgnoreCase("123")){
-                    JOptionPane.showMessageDialog(null, "Login realizado com sucesso.");
+                    JOptionPane.showMessageDialog(null, "LOGIN REALIZADO COM SUCESSO!");
                     MenuFuncionario n = new MenuFuncionario();
                     n.setVisible(true);
                     dispose();
                 }else{
-                    JOptionPane.showMessageDialog(null, "Revise a senha ou login.");
+                    JOptionPane.showMessageDialog(null, "REVISE A SENHA OU LOGIN!");
                 }
             }
         }
@@ -375,24 +375,24 @@ public class PaginaInicial extends javax.swing.JFrame {
 
             if(caixaLogin.getSelectedItem().toString().equalsIgnoreCase("admin")){
                 if(senha.equalsIgnoreCase("admin")){
-                    JOptionPane.showMessageDialog(null, "Login realizado com sucesso.");
+                    JOptionPane.showMessageDialog(null, "LOGIN REALIZADO COM SUCESSO!");
                     MenuAdmin m = new MenuAdmin();
                     m.setVisible(true);
                     dispose();
                 }else{
-                    JOptionPane.showMessageDialog(null, "Revise a senha ou login.");
+                    JOptionPane.showMessageDialog(null, "REVISE A SENHA OU LOGIN!");
                 }
             }
 
 
             if(caixaLogin.getSelectedItem().toString().equalsIgnoreCase("funcionário")){
                 if(senha.equalsIgnoreCase("123")){
-                    JOptionPane.showMessageDialog(null, "Login realizado com sucesso.");
+                    JOptionPane.showMessageDialog(null, "LOGIN REALIZADO COM SUCESSO!");
                     MenuFuncionario n = new MenuFuncionario();
                     n.setVisible(true);
                     dispose();
                 }else{
-                    JOptionPane.showMessageDialog(null, "Revise a senha ou login.");
+                    JOptionPane.showMessageDialog(null, "REVISE A SENHA OU LOGIN!");
                 }
             }
     }//GEN-LAST:event_botaoEntrarMouseClicked

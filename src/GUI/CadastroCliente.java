@@ -309,7 +309,7 @@ public class CadastroCliente extends javax.swing.JFrame{
                 arquivo.close();
 
             } catch (IOException ex) {
-                JOptionPane.showMessageDialog(null, "ERRO");
+                JOptionPane.showMessageDialog(null, "ERRO - ARQUIVO");
             }
             
         }
@@ -326,7 +326,7 @@ public class CadastroCliente extends javax.swing.JFrame{
                 arquivo.close();
 
             } catch (IOException ex) {
-                JOptionPane.showMessageDialog(null, "ERRO");
+                JOptionPane.showMessageDialog(null, "ERRO - ARQUIVO");
             }
         } 
              

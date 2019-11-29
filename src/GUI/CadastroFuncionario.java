@@ -319,7 +319,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                 arquivo.close();
 
             } catch (IOException ex) {
-                JOptionPane.showMessageDialog(null, "ERRO");
+                JOptionPane.showMessageDialog(null, "ERRO - ARQUIVO");
             }
                 
             }
@@ -336,7 +336,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                 arquivo.close();
 
             } catch (IOException ex) {
-                JOptionPane.showMessageDialog(null, "ERRO");
+                JOptionPane.showMessageDialog(null, "ERRO - ARQUIVO");
             }
             }
             
@@ -356,7 +356,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                 arquivo.close();
 
             } catch (IOException ex) {
-                JOptionPane.showMessageDialog(null, "ERRO");
+                JOptionPane.showMessageDialog(null, "ERRO - ARQUIVO");
             }
                 
             }
@@ -373,7 +373,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                 arquivo.close();
 
                 } catch (IOException ex) {
-                    JOptionPane.showMessageDialog(null, "ERRO");
+                    JOptionPane.showMessageDialog(null, "ERRO - ARQUIVO");
                 }
                 
             }

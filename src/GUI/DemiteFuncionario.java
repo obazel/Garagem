@@ -174,7 +174,7 @@ public class DemiteFuncionario extends javax.swing.JFrame {
                 arquivo.close();
 
             } catch (IOException ex) {
-                JOptionPane.showMessageDialog(null, "ERRO DE ARQUIVO");
+                JOptionPane.showMessageDialog(null, "ERRO - ARQUIVO");
             }  
      }
      
@@ -195,11 +195,11 @@ public class DemiteFuncionario extends javax.swing.JFrame {
                 arquivo.close();
 
             } catch (IOException ex) {
-                JOptionPane.showMessageDialog(null, "ERRO DE ARQUIVO");
+                JOptionPane.showMessageDialog(null, "ERRO - ARQUIVO");
             }
      }
      
-     JOptionPane.showMessageDialog(null, "Funcionário demitido com sucesso!");
+     JOptionPane.showMessageDialog(null, "FUNCIONÁRIO DEMITIDO!");
      
      dispose();
     }//GEN-LAST:event_botaoRealizarDemissaoMouseClicked
@@ -224,7 +224,7 @@ public class DemiteFuncionario extends javax.swing.JFrame {
                        arquivo.close();
 
                    } catch (IOException ex) {
-                       JOptionPane.showMessageDialog(null, "ERRO DE ARQUIVO");
+                       JOptionPane.showMessageDialog(null, "ERRO - ARQUIVO");
                    }  
             }
 
@@ -245,11 +245,11 @@ public class DemiteFuncionario extends javax.swing.JFrame {
                        arquivo.close();
 
                    } catch (IOException ex) {
-                       JOptionPane.showMessageDialog(null, "ERRO DE ARQUIVO");
+                       JOptionPane.showMessageDialog(null, "ERRO - ARQUIVO");
                    }
             }
 
-            JOptionPane.showMessageDialog(null, "Funcionário demitido com sucesso!");
+            JOptionPane.showMessageDialog(null, "FUNCIONÁRIO DEMITIDO!");
 
             dispose();
         }
