@@ -83,8 +83,8 @@ public class DemiteFuncionario extends javax.swing.JFrame {
             }
         });
 
-        botaoRealizarDemissao.setBackground(new java.awt.Color(255, 255, 255));
-        botaoRealizarDemissao.setForeground(new java.awt.Color(153, 0, 0));
+        botaoRealizarDemissao.setBackground(new java.awt.Color(153, 0, 0));
+        botaoRealizarDemissao.setForeground(new java.awt.Color(255, 255, 255));
         botaoRealizarDemissao.setText("DEMITIR");
         botaoRealizarDemissao.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -94,8 +94,8 @@ public class DemiteFuncionario extends javax.swing.JFrame {
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/logoGaragem.jpeg"))); // NOI18N
 
-        botaoFechar.setBackground(new java.awt.Color(255, 255, 255));
-        botaoFechar.setForeground(new java.awt.Color(153, 0, 0));
+        botaoFechar.setBackground(new java.awt.Color(153, 0, 0));
+        botaoFechar.setForeground(new java.awt.Color(255, 255, 255));
         botaoFechar.setText("FECHAR");
         botaoFechar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
