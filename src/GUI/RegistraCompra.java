@@ -257,7 +257,7 @@ public class RegistraCompra extends javax.swing.JFrame {
                 FileWriter arquivo = new FileWriter("BancoCompras.txt", true);
                 PrintWriter gravar = new PrintWriter(arquivo);
                 
-                gravar.printf(inserirCliente.getText() + ";" +  inserirVeiculo.getText() + ";" +  inserirID.getText() + ";" + selecionaDia.getActionCommand() + ";" + (selecionaMes.getSelectedIndex()+1) + ";" +  caixaAno.getSelectedItem().toString() +  "%n");
+               gravar.printf(inserirCliente.getText() + ";" +  inserirVeiculo.getText() + ";" +  inserirID.getText() + ";" + (selecionaDia.getSelectedIndex() + 1) + ";" + (selecionaMes.getSelectedIndex()+1) + ";" +  caixaAno.getSelectedItem().toString() +  "%n");
                 
                 arquivo.close();
 
