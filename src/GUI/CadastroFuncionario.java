@@ -351,7 +351,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                 FileWriter arquivo = new FileWriter("BancoGerentes.txt", true);
                 PrintWriter gravar = new PrintWriter(arquivo);
                 
-                gravar.printf(inserirMatricula.getText() + ";" + inserirNome.getText() + ";" +  inserirCPF.getText() + ";" +  "Feminino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText() + ";" + selecionaDia.getSelectedItem().toString() + ";" + (selecionaMes.getSelectedIndex() + 1) + ";" + selecionaAno.getSelectedItem().toString() +"%n");
+                gravar.printf(inserirMatricula.getText() + ";" + inserirNome.getText() + ";" +  inserirCPF.getText() + ";" +  "Feminino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText() + ";" + selecionaDia.getSelectedItem().toString() + ";" + (selecionaMes.getSelectedIndex() + 1) + ";" + selecionaAno.getSelectedItem().toString() + "%n");
                 
                 arquivo.close();
 
@@ -368,7 +368,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                 FileWriter arquivo = new FileWriter("BancoVendedores.txt", true);
                 PrintWriter gravar = new PrintWriter(arquivo);
                 
-                gravar.printf(inserirMatricula.getText() + ";" + inserirNome.getText() + ";" +  inserirCPF.getText() + ";" +  "Feminino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText() + ";" + selecionaDia.getSelectedItem().toString() + ";" + (selecionaMes.getSelectedIndex() + 1) + ";" + selecionaAno.getSelectedItem().toString() +"%n");
+                gravar.printf(inserirMatricula.getText() + ";" + inserirNome.getText() + ";" +  inserirCPF.getText() + ";" +  "Feminino" + ";" +  inserirEndereco.getText() + ";" + inserirTelefone.getText() + ";" + selecionaDia.getSelectedItem().toString() + ";" + (selecionaMes.getSelectedIndex() + 1) + ";" + selecionaAno.getSelectedItem().toString() + "%n");
                 
                 arquivo.close();
 
